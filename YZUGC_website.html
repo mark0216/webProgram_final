@@ -6,13 +6,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YZUGC website</title>
     <style>
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
         .container{
-            
+        margin: 0 auto;
+        width: 80vw;
+        background-color: azure;
+        display: flex;
+        flex-direction: column;
+        }
+        .header{
+      
+        background: center/ cover no-repeat url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrUyELgGHW0VTRGZMvvMDK4_9008kRPCDTCJIxCus0BDurKrPEnHr3myIM9kRv6BpI4HPQG2rTl8RFNCTdPI8-i9iS4S3TOQFa1dJJ1xFmJ8raG_2HFV4JIlv8AAZevDbD5Cy5nYc44NFk1XaBQxX_n9EHUrO2uVnUsJsqmYurJ9W6G6V-oweQCeqEng/w658-h321/Clouds-sea-sky_3840x2160.jpg" ) ; 
+        background-size: 1530px;
+        background-color: blanchedalmond;
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        color: rgb(3, 3, 3);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        border: 3px solid rgb(255, 255, 255);
+    
+       
+        
+        
+
+
+        }
+        .nav{
+             background-color: rgb(14, 166, 236);
+             display: flex;
+             justify-content: space-around;
+             top: 0;
+             position: sticky;
+        }
+        .navItem{
+         background-color: rgba(27, 10, 10, 0.637);
+         border:  1px solid black;
+         flex-basis: 100%;
+         font-size:  24px;
+         padding: 5px ;
+         color: white;
+         text-align: center;
+        }
+        .subGroupName{
+            background-color: rgb(58, 147, 150);
+            top: 0;
+            position: sticky;
+            color: black;
+            background-color: rgb(14, 166, 236);
+             display: flex;
+             justify-content: space-around;
+             top: 0;
+             position: sticky;
+        }
+        .subGroupName01{
+         top: 36px;
+         
+         
+        }
+        .subGroupName02{
+          top: 52px;
         }
         
+        .subGroupName03{
+            top: 68px;
+     }
+       .subGroupName04{
+        top: 85px;
+
+     }
+        .footer{
+            width: 80vw;
+            height: 5vh;
+            font-size:  20px;
+        background-color: rgb(40, 125, 196);
+        bottom: 0;
+        display: flex;
+        position: sticky;
+        justify-content: center;
+        color: black;
+        }
+        .article .group .subGroup:nth-child(2){
+           display: flex; 
+         /* border: 3px solid tomato; */
+         flex-wrap: wrap;
+        justify-content: space-between;
+
+
+  }
+  .subItem_img{
+
+      flex-basis: calc(100%/4)
+
+
+
+  } .subItem img{
+      width: 100%;
+  }
+   
     </style>
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
+     <div class="header">
+        <img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJWrHtMG6XruGhgQiug7aLwsHAXUNboaIArLPeThNFZrH8dDq45mwJ8BgQ30I8rI0zaqljzoTIHXoFBxGkSUe5TXtO38ET27UbF0Flkrg6bGvwPu-5THYbs8cG_6aE-LO5Jk9VDc9MRvgfBbTV4gss3iu5a8Zw5J166aTCI617oJgYOEyRpGvoG-Z4lA/s320/%E9%81%8A%E6%88%B2.png'alt="初音未來" style="width: 150px
+        ;height: 300px;">
+        <p style="position: relative; top: 1px;">元智遊戲創作社官方網站</p>
+     </div>
+     <div class="nav">
+     <div class="navItem">社團簡介</div>
+     <div class="navItem">社團歷史</div>
+     <div class="navItem">社團作品</div>
+     <div class="navItem">活動資訊</div>
+     <div class="navItem"> 其他資訊</div>
+</div>
+<div class="article">
+    <div class="group">
+        <div class="subGroupName subGroupName01">社團簡介</div>
+        <div class="subGroup">
+            <div class="subItem">社團簡介</div>
+            <div class="subItem">社團簡介</div>
+            <div class="subItem">社團簡介</div>
+            <div class="subItem">社團簡介</div>
+            <div class="subItem">社團簡介</div>
+            
+     </div>
+     <div class="subGroupName subGroupName02">社團歷史</div>
+     <div class="subGroup">
+            <div class="subItem">社團歷史</div>
+            <div class="subItem">社團歷史</div>
+            <div class="subItem">社團歷史</div>
+            <div class="subItem">社團歷史</div>
+            <div class="subItem">社團歷史</div>
+        </div>
+        <div class="subGroupName subGroupName03">社團作品</div>
+     <div class="subGroup">
+            <div class="subItem">社團作品</div>
+            <div class="subItem">社團作品</div>
+            <div class="subItem">社團作品</div>
+            <div class="subItem">社團作品</div>
+            <div class="subItem">社團作品</div>
+        </div>
+        <div class="subGroupName subGroupName04">活動資訊</div>
+        <div class="subGroup">
+            <div class="subItem">活動資訊</div>
+            <div class="subItem">活動資訊</div>
+            <div class="subItem">活動資訊</div>
+            <div class="subItem">活動資訊</div>
+            <div class="subItem">活動資訊</div>
+            
+          
+        
+        </div>
+        <div class="footer">@YZU</div>
+    </div>
+   
 </body>
 </html>
