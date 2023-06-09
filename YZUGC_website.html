@@ -115,27 +115,35 @@
             width: 100%;
         }
     </style>
+
+
+
 </head>
 
 <body>
+
+
     <div class="container">
+
         <div class="header">
             <img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJWrHtMG6XruGhgQiug7aLwsHAXUNboaIArLPeThNFZrH8dDq45mwJ8BgQ30I8rI0zaqljzoTIHXoFBxGkSUe5TXtO38ET27UbF0Flkrg6bGvwPu-5THYbs8cG_6aE-LO5Jk9VDc9MRvgfBbTV4gss3iu5a8Zw5J166aTCI617oJgYOEyRpGvoG-Z4lA/s320/%E9%81%8A%E6%88%B2.png'
-                alt="初音未來" style="width: 150px
-        ;height: 300px;">
+                alt="初音未來" style="width: 150px; height: 300px;">
+
             <p style="position: relative; top: 1px;">元智遊戲創作社官方網站</p>
         </div>
+
         <div class="nav">
-            <div class="navItem">社團簡介</div>
-            <div class="navItem">社團歷史</div>
-            <div class="navItem">社團作品</div>
-            <div class="navItem">活動資訊</div>
-            <div class="navItem"> 其他資訊</div>
+            <div class="navItem" onclick="ShowDiv(1)">社團簡介</div>
+            <div class="navItem" onclick="ShowDiv(2)">社團歷史</div>
+            <div class="navItem" onclick="ShowDiv(3)">社團作品</div>
+            <div class="navItem" onclick="ShowDiv(4)">活動資訊</div>
+            <div class="navItem" onclick="ShowDiv(5)">其他資訊</div>
         </div>
+
         <div class="article">
             <div class="group">
-                <div class="subGroupName subGroupName01">社團簡介</div>
-                <div class="subGroup">
+                <div class="subGroupName subGroupName01" id="LableIntro">社團簡介</div>
+                <div class="subGroup" id="MainIntro">
                     <div class="subItem">社團簡介</div>
                     <div class="subItem">社團簡介</div>
                     <div class="subItem">社團簡介</div>
@@ -143,32 +151,129 @@
                     <div class="subItem">社團簡介</div>
 
                 </div>
-                <div class="subGroupName subGroupName02">社團歷史</div>
-                <div class="subGroup">
+                <div class="subGroupName subGroupName02" id="LableHistory">社團歷史</div>
+                <div class="subGroup" id="MainHistory">
                     <div class="subItem">社團歷史</div>
                     <div class="subItem">社團歷史</div>
                     <div class="subItem">社團歷史</div>
                     <div class="subItem">社團歷史</div>
                     <div class="subItem">社團歷史</div>
                 </div>
-                <div class="subGroupName subGroupName03">社團作品</div>
-                <div class="subGroup">
+                <div class="subGroupName subGroupName03" id="LableAsset">社團作品</div>
+                <div class="subGroup" id="MainAsset">
                     <div class="subItem">社團作品</div>
                     <div class="subItem">社團作品</div>
                     <div class="subItem">社團作品</div>
                     <div class="subItem">社團作品</div>
                     <div class="subItem">社團作品</div>
                 </div>
-                <div class="subGroupName subGroupName04">活動資訊</div>
-                <div class="subGroup">
+                <div class="subGroupName subGroupName04" id="LableEventInfor">活動資訊</div>
+                <div class="subGroup" id="MainEventInfor">
                     <div class="subItem">活動資訊</div>
                     <div class="subItem">活動資訊</div>
                     <div class="subItem">活動資訊</div>
                     <div class="subItem">活動資訊</div>
                     <div class="subItem">活動資訊</div>
+                </div>
+
+                <div class="subGroupName subGroupName05" id="LableOther">其他資訊</div>
+                <div class="subGroup" id="MainOther">
+                    <div class="subItem">其他資訊</div>
+                    <div class="subItem">其他資訊</div>
+                    <div class="subItem">其他資訊</div>
+                    <div class="subItem">其他資訊</div>
+                    <div class="subItem">其他資訊</div>
                 </div>
                 <div class="footer">@YZU</div>
             </div>
+        </div>
+    </div>
+
+    <script>
+
+        var LableIntro = document.getElementById("LableIntro");
+        var MainIntro = document.getElementById("MainIntro"); // 社團介紹
+
+        var LableHistory = document.getElementById("LableHistory");
+        var MainHistory = document.getElementById("MainHistory"); // 社團歷史
+
+        var LableAsset = document.getElementById("LableAsset");
+        var MainAsset = document.getElementById("MainAsset"); // 社團作品
+
+        var LableEventInfor = document.getElementById("LableEventInfor");
+        var MainEventInfor = document.getElementById("MainEventInfor"); // 活動資訊
+
+        var LableOther = document.getElementById("LableOther");
+        var MainOther = document.getElementById("MainOther"); // 其他資訊
+
+
+        function HideAllDiv() {
+            LableIntro.style.display = "none";
+            LableHistory.style.display = "none";
+            LableAsset.style.display = "none";
+            LableEventInfor.style.display = "none";
+            LableOther.style.display = "none";
+
+            MainIntro.style.display = "none";
+            MainHistory.style.display = "none";
+            MainAsset.style.display = "none";
+            MainEventInfor.style.display = "none";
+            MainOther.style.display = "none";
+        }
+
+        function ShowDiv(name) {
+
+            console.log(name);
+
+            HideAllDiv();
+
+            switch (name) {
+                case 1:
+                    {
+                        LableIntro.style.display = "block";
+                        MainIntro.style.display = "block";
+                        break;
+                    }
+
+                case 2:
+                    {
+                        LableHistory.style.display = "block";
+                        MainHistory.style.display = "block";
+                        break;
+                    }
+
+                case 3:
+                    {
+                        LableAsset.style.display = "block";
+                        MainAsset.style.display = "block";
+                        break;
+                    }
+
+                case 4:
+                    {
+                        LableEventInfor.style.display = "block";
+                        MainEventInfor.style.display = "block";
+                        break;
+                    }
+
+                case 5:
+                    {
+                        LableOther.style.display = "block";
+                        MainOther.style.display = "block";
+                        break;
+                    }
+            }
+        }
+
+        window.onload = function () {
+
+            HideAllDiv();
+
+            ShowDiv("Intro");
+
+        }
+
+    </script>
 
 </body>
 
