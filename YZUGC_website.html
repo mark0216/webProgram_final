@@ -85,6 +85,94 @@
             top: 85px;
         }
 
+        .subGroup04 {
+            height: 300vh;
+
+            /*background-color: yellow;*/
+            /* 本體*/
+
+            display: flex;
+            flex-direction: row;
+            gap: 3vh;
+            /* flex*/
+        }
+
+        .subItem04 {
+
+            height: 100vh;
+            /* background-color: red; */
+
+            /* padding: 10px; */
+            border: solid gray 1px;
+
+            /* 本體*/
+
+            display: flex;
+            flex-direction: column;
+            /* flex*/
+        }
+
+        .subItem04Block {
+            height: 40vh;
+
+            padding: 20px;
+
+            /* background-color: blue;*/
+
+            /* 本體*/
+
+            display: flex;
+            flex-direction: row;
+            /* flex*/
+        }
+
+        .subItem04BlockPic {
+            width: 30vw;
+            /* 本體*/
+        }
+
+        .subItem04BlockText {
+            width: 70vw;
+            /* 本體*/
+        }
+
+        .subItem04Hide {
+            height: 20vh;
+
+            padding: 20px;
+            /* 本體*/
+
+            display: flex;
+            flex-direction: row;
+            /* flex*/
+        }
+
+        .subItem04HideItem {
+
+            height: 50vh;
+
+            /* 本體*/
+
+            display: flex;
+            flex-direction: column;
+            /* flex*/
+        }
+
+        .subItem04HideItemPic {
+
+            height: 20vh;
+
+            /* 本體*/
+        }
+
+        .subItem04HideItemText {
+
+            height: 30vh;
+
+            /* 本體*/
+
+        }
+
         .footer {
             width: 80vw;
             height: 5vh;
@@ -168,12 +256,42 @@
                     <div class="subItem">社團作品</div>
                 </div>
                 <div class="subGroupName subGroupName04" id="LableEventInfor">活動資訊</div>
-                <div class="subGroup" id="MainEventInfor">
-                    <div class="subItem">活動資訊</div>
-                    <div class="subItem">活動資訊</div>
-                    <div class="subItem">活動資訊</div>
-                    <div class="subItem">活動資訊</div>
-                    <div class="subItem">活動資訊</div>
+                <div class="subGroup04" id="MainEventInfor">
+                    <div class="subItem04" id="subItem04_1">
+                        <div class="subItem04Block" onclick="GroupShow(0)">
+                            <div class="subItem04BlockPic"></div>
+                            <div class="subItem04BlockText"></div>
+                        </div>
+                        <div class="subItem04Hide" id="HideEventInfor_01">
+                            <div class="subItem04HideItem">
+                                <div class="subItem04HideItemPic"></div>
+                                <div class="subItem04HideItemText"></div>
+                            </div>
+                            <div class="subItem04HideItem">
+                                <div class="subItem04HideItemPic"></div>
+                                <div class="subItem04HideItemText"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 01 -->
+
+                    <div class="subItem04" id="subItem04_2">
+                        <div class="subItem04Block" onclick="GroupShow(1)">
+                            <div class="subItem04BlockPic"></div>
+                            <div class="subItem04BlockText"></div>
+                        </div>
+                        <div class="subItem04Hide" id="HideEventInfor_02">
+                            <div class="subItem04HideItem">
+                                <div class="subItem04HideItemPic"></div>
+                                <div class="subItem04HideItemText"></div>
+                            </div>
+                            <div class="subItem04HideItem">
+                                <div class="subItem04HideItemPic"></div>
+                                <div class="subItem04HideItemText"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 02 -->
                 </div>
 
                 <div class="subGroupName subGroupName05" id="LableOther">其他資訊</div>
@@ -220,6 +338,7 @@
             MainEventInfor.style.display = "none";
             MainOther.style.display = "none";
         }
+        // 全頁面關閉 
 
         function ShowDiv(name) {
 
@@ -253,6 +372,7 @@
                     {
                         LableEventInfor.style.display = "block";
                         MainEventInfor.style.display = "block";
+                        GroupHide();
                         break;
                     }
 
@@ -264,14 +384,63 @@
                     }
             }
         }
+        // 開啟單一頁面
+
+
+        // nav控制
+
+
+        var HideEventInfor = ['HideEventInfor_01'];
+        var HideState = [false, false, false];
+
+        var elementId;
+        var element;
+
+        function GroupHide() {
+
+            for (var i = 0; i < 1; i++) {
+                elementId = HideEventInfor[i];
+                element = document.getElementById(elementId);
+
+                //   console.log(elementId);
+
+                MainEventInfor.style.height = window.innerHeight * 0.4 + 'px';
+                element.style.display = "none";
+                HideState[i] = false;
+            }
+        }
+
+        function GroupShow(index) {
+
+            if (HideState[index] == false) {
+                elementId = HideEventInfor[index];
+                element = document.getElementById(elementId);
+
+                MainEventInfor.style.height = window.innerHeight*1 + 'px';
+                element.style.display = "block";
+                HideState[index] = true;
+            }
+            else {
+                elementId = HideEventInfor[index];
+                element = document.getElementById(elementId);
+
+                MainEventInfor.style.height = window.innerHeight * 0.4 + 'px';
+                element.style.display = "none";
+                HideState[index] = false;
+            }
+
+        }
+
+        // subgroup控制
 
         window.onload = function () {
 
             HideAllDiv();
 
             ShowDiv("Intro");
-
         }
+
+        // 視窗啟動
 
     </script>
 
