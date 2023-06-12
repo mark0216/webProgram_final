@@ -61,7 +61,7 @@
         .subGroupName {
             background-color: rgb(58, 147, 150);
             top: 0;
-            position: sticky;
+            /* position: sticky; */
             color: black;
             background-color: rgb(14, 166, 236);
             display: flex;
@@ -72,7 +72,7 @@
         }
 
         .subGroupName01 {
-            top: 36px;
+            top: 50px;
         }
 
         .subGroupName02 {
@@ -230,6 +230,11 @@
             font-size: 35px; 
             border: 1;
         }
+        .gameTitle{
+            font-size: 50px;
+            width: 100%;
+            margin-left: 10px;
+        }
     </style>
 
 
@@ -249,7 +254,7 @@
         </div>
 
         <div class="nav">
-            <div class="navItem" onclick="ShowDiv(1)">社團簡介</div>
+            <div class="navItem" onclick="ShowDiv(1)">首頁</div>
             <div class="navItem" onclick="ShowDiv(2)">社團歷史</div>
             <div class="navItem" onclick="ShowDiv(3)">社團作品</div>
             <div class="navItem" onclick="ShowDiv(4)">活動資訊</div>
@@ -275,13 +280,15 @@
                     <div class="subItem">社團歷史</div>
                 </div>
                 <div class="subGroupName subGroupName03" id="LableAsset">社團作品</div>
+
                 <div class="pageItemArea" id="MainAsset">
+                    <div class="gameTitle">Tower Defender</div>
                     <div class="subGroup_flexItem">
                         <img src="img/gameScreenshot/TD_screenShot(1).png" class="subitem_bigImg">
                         <div class="subitem_text">
-                            遊戲簡介：冒險者跟著藏寶圖來到了塔下，但他得通過守護者的重重關卡到達塔頂才能找到神秘的寶藏。<br />
-                            <br />
-                            這是款單機雙人對抗遊戲，身為冒險者(鍵盤)的玩家必須在守護者(滑鼠)的攻擊下在時限內到達塔頂。<br />
+                            遊戲簡介：冒險者跟著藏寶圖來到了塔下，但他得通過守護者的重重關卡到達塔頂才能找到神秘的寶藏。<br/>
+                            <br/>
+                            這是款單機雙人對抗遊戲，身為冒險者(鍵盤)的玩家必須在守護者(滑鼠)的攻擊下在時限內到達塔頂。<br/>
                             </div>
                     </div>
                     <div class="subGroup_flexItem">
@@ -340,7 +347,7 @@
                     <div class="subItem">其他資訊</div>
                     <div class="subItem">其他資訊</div>
                 </div>
-                <div class="footer">@YZUGC 聯絡我們</div>
+                <div class="footer">@YZUGC 聯絡我們 電子信箱：yzugamecreat@gmail.com</div>
             </div>
         </div>
     </div>
