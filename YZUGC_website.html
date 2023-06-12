@@ -59,19 +59,17 @@
         }
 
         .subGroupName {
-            background-color: rgb(58, 147, 150);
-            top: 0;
-            /* position: sticky; */
+            top: 50px;
             color: black;
             background-color: rgb(14, 166, 236);
             display: flex;
             justify-content: space-around;
-            top: 0;
             position: sticky;
             font-size: 30px;
+            text-align: center;
         }
 
-        .subGroupName01 {
+        /* .subGroupName01 {
             top: 50px;
         }
 
@@ -85,7 +83,7 @@
 
         .subGroupName04 {
             top: 85px;
-        }
+        } */
 
         .subGroup04 {
             height: 300vh;
@@ -204,8 +202,10 @@
         }
 
         .subitem_gameImg {
-            width: 20%;
+            width: 19.6%;
             height: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         .subitem_bigImg {
@@ -219,21 +219,32 @@
         }
 
         .pageItemArea {
-            width: 90%;
             height: auto;
             background-color: aqua;
         }
-        .subitem_text{
-            font-size: 22px;  
+
+        .gameSection_content {
+            font-size: 22px;
+            padding: 10px;
+            width: 48.8%;
         }
-        .subitem_bigText{
-            font-size: 35px; 
+
+        .subitem_bigText {
+            font-size: 35px;
             border: 1;
         }
-        .gameTitle{
+
+        .gameSection_title {
             font-size: 50px;
             width: 100%;
-            margin-left: 10px;
+            padding-left: 10px;
+        }
+
+        .gameSection_main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            border: 3px solid gray;
         }
     </style>
 
@@ -263,7 +274,7 @@
 
         <div class="article">
             <div class="group">
-                <div class="subGroupName subGroupName01" id="LableIntro">首頁</div>
+                <div class="subGroupName" id="LableIntro">首頁</div>
                 <div class="subGroup" id="MainIntro">
                     <div class="subItem">社團簡介</div>
                     <div class="subItem">社團簡介</div>
@@ -271,7 +282,7 @@
                     <div class="subItem">社團簡介</div>
                     <div class="subItem">社團簡介</div>
                 </div>
-                <div class="subGroupName subGroupName02" id="LableHistory">社團歷史</div>
+                <div class="subGroupName" id="LableHistory">社團歷史</div>
                 <div class="subGroup" id="MainHistory">
                     <div class="subItem">社團歷史</div>
                     <div class="subItem">社團歷史</div>
@@ -279,28 +290,54 @@
                     <div class="subItem">社團歷史</div>
                     <div class="subItem">社團歷史</div>
                 </div>
-                <div class="subGroupName subGroupName03" id="LableAsset">社團作品</div>
-
+                <div class="subGroupName" id="LableAsset">社團作品</div>
                 <div class="pageItemArea" id="MainAsset">
-                    <div class="gameTitle">Tower Defender</div>
-                    <div class="subGroup_flexItem">
+
+                    <div class="gameSection_main">
+                        <div class="gameSection_title">Tower Defender</div>
+
                         <img src="img/gameScreenshot/TD_screenShot(1).png" class="subitem_bigImg">
-                        <div class="subitem_text">
-                            遊戲簡介：冒險者跟著藏寶圖來到了塔下，但他得通過守護者的重重關卡到達塔頂才能找到神秘的寶藏。<br/>
-                            <br/>
-                            這是款單機雙人對抗遊戲，身為冒險者(鍵盤)的玩家必須在守護者(滑鼠)的攻擊下在時限內到達塔頂。<br/>
-                            </div>
-                    </div>
-                    <div class="subGroup_flexItem">
+                        <div class="gameSection_content">
+                            遊戲簡介：冒險者跟著藏寶圖來到了塔下，但他得通過守護者的重重關卡到達塔頂才能找到神秘的寶藏。<br />
+                            <br />
+                            這是款單機雙人對抗遊戲，身為冒險者(鍵盤)的玩家必須在守護者(滑鼠)的攻擊下在時限內到達塔頂。<br />
+                            <br />
+                            平台：PC<br />
+                            <br />
+                            遊玩人數：2人
+                        </div>
+
                         <img src="img/gameScreenshot/TD_screenShot(1).png" class="subitem_gameImg">
                         <img src="img/gameScreenshot/TD_screenShot(5).png" class="subitem_gameImg">
                         <img src="img/gameScreenshot/TD_screenShot(3).png" class="subitem_gameImg">
                         <img src="img/gameScreenshot/TD_screenShot(4).png" class="subitem_gameImg">
                         <img src="img/gameScreenshot/TD_screenShot(2).png" class="subitem_gameImg">
                     </div>
+
+                    <div class="gameSection_main">
+                        <div class="gameSection_title">Tower Defender</div>
+
+                        <img src="img/gameScreenshot/TD_screenShot(1).png" class="subitem_bigImg">
+                        <div class="gameSection_content">
+                            遊戲簡介：冒險者跟著藏寶圖來到了塔下，但他得通過守護者的重重關卡到達塔頂才能找到神秘的寶藏。<br />
+                            <br />
+                            這是款單機雙人對抗遊戲，身為冒險者(鍵盤)的玩家必須在守護者(滑鼠)的攻擊下在時限內到達塔頂。<br />
+                            <br />
+                            平台：PC<br />
+                            <br />
+                            遊玩人數：2人
+                        </div>
+
+                        <img src="img/gameScreenshot/TD_screenShot(1).png" class="subitem_gameImg">
+                        <img src="img/gameScreenshot/TD_screenShot(5).png" class="subitem_gameImg">
+                        <img src="img/gameScreenshot/TD_screenShot(3).png" class="subitem_gameImg">
+                        <img src="img/gameScreenshot/TD_screenShot(4).png" class="subitem_gameImg">
+                        <img src="img/gameScreenshot/TD_screenShot(2).png" class="subitem_gameImg">
+                    </div>
+
                 </div>
 
-                <div class="subGroupName subGroupName04" id="LableEventInfor">活動資訊</div>
+                <div class="subGroupName" id="LableEventInfor">活動資訊</div>
                 <div class="subGroup04" id="MainEventInfor">
                     <div class="subItem04" id="subItem04_1">
                         <div class="subItem04Block" onclick="GroupShow(0)">
@@ -339,7 +376,7 @@
                     <!-- 02 -->
                 </div>
 
-                <div class="subGroupName subGroupName05" id="LableOther">其他資訊</div>
+                <div class="subGroupName" id="LableOther">其他資訊</div>
                 <div class="subGroup" id="MainOther">
                     <div class="subItem">其他資訊</div>
                     <div class="subItem">其他資訊</div>
@@ -508,6 +545,21 @@
             })
             gameImages[4].addEventListener('click', function () {
                 bigGameImage[0].src = gameImages[4].src;
+            })
+            gameImages[5].addEventListener('click', function () {
+                bigGameImage[1].src = gameImages[5].src;
+            })
+            gameImages[6].addEventListener('click', function () {
+                bigGameImage[1].src = gameImages[6].src;
+            })
+            gameImages[7].addEventListener('click', function () {
+                bigGameImage[1].src = gameImages[7].src;
+            })
+            gameImages[8].addEventListener('click', function () {
+                bigGameImage[1].src = gameImages[8].src;
+            })
+            gameImages[9].addEventListener('click', function () {
+                bigGameImage[1].src = gameImages[9].src;
             })
         }
 
