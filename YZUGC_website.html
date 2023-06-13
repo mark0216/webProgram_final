@@ -379,14 +379,16 @@
                 <div class="aboutUs0">關於我們</div>
 
                 <div class="aboutUs1">關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於</div>
+
+                <div class="aboutUs2" id="LableAb2">
+                    <p>關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於</p>
+                </div>
+
+                <div class="aboutUs3" id="LableAb3">關於關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於</div>
             </div>
         </div>
 
-        <div class="aboutUs2" id="LableAb2">
-            <p>關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於</p>
-        </div>
 
-        <div class="aboutUs3" id="LableAb3">關於關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於</div>
 
         <div class="subGroupName" id="LableHistory">社團歷史</div>
         <div class="subGroup" id="MainHistory">
@@ -723,13 +725,12 @@
 
             Count = 0;
 
-            for(i = 0;i < 3;i++)
-            {
-                if(SubHideState[i])
-                Count+=1;
+            for (i = 0; i < 3; i++) {
+                if (SubHideState[i])
+                    Count += 1;
 
                 console.log(Count);
-                SubHight = 106 + Count*55;
+                SubHight = 106 + Count * 55;
                 console.log(SubHight);
 
                 MainEventInfor.style.height = SubHight + 'vh';
