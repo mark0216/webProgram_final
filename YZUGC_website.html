@@ -325,6 +325,54 @@
             display: flex;
             align-items: center;
         }
+
+        .ProducerContainer {
+
+            height: 90vh;
+            width: 80vw;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Producer {
+            height: 30vh;
+            width: 80vw;
+
+            border: solid silver;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ProducerPic
+        {
+            width: 30vw;
+            height: 30vh;
+
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ProducerText
+        {
+            width: 70vw;
+            height: 30vh;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            
+            font-size: 30px;
+        }
     </style>
 </head>
 
@@ -472,12 +520,13 @@
                         <div class="subItemTitle" style="border: solid gray 2px;">即將舉辦</div>
                         <div class="subItem04Block" id="block01" onclick="SubItem04Control(0)">
 
-                            <div class="subItem04BlockPic"> <img src="img/Event/GameJam.jpg" width="180" style="padding: 1vh"></div>
+                            <div class="subItem04BlockPic"> <img src="img/Event/GameJam.jpg" width="180"
+                                    style="padding: 1vh"></div>
 
                             <div class="subItem04BlockText">
                                 <p>
-                                    跨校聯合Game Jam <br>      
-                                    參加對象：對遊戲製作有興趣之學生以及業界人士 <br>            
+                                    跨校聯合Game Jam <br>
+                                    參加對象：對遊戲製作有興趣之學生以及業界人士 <br>
                                     報名費用：免費
                                 </p>
                             </div>
@@ -490,7 +539,8 @@
                                 <div class="subItem04HideItemText" style="font-size: 20px;">
                                     <p>
                                         活動內容：所有參加者將進行分組，透過組別合作與討論於三天的時間內創作出符合主題的遊戲，並於最後進行各組的成果發表。<br>
-                                        <a href="https://docs.google.com/forms/d/1F74aTGsMc9FSSXIedcBpvJjComjkxjvwzwAxee4w6Wc/viewform?fbclid=IwAR1fIrnSmkAr7v7vppyXA_zRklnyI8ub6p71DBw7IsjDY5CAw-1eDWsrYyA&edit_requested=true">報名連結</a>
+                                        <a
+                                            href="https://docs.google.com/forms/d/1F74aTGsMc9FSSXIedcBpvJjComjkxjvwzwAxee4w6Wc/viewform?fbclid=IwAR1fIrnSmkAr7v7vppyXA_zRklnyI8ub6p71DBw7IsjDY5CAw-1eDWsrYyA&edit_requested=true">報名連結</a>
                                     </p>
                                 </div>
                             </div>
@@ -504,7 +554,8 @@
                         <div class="subItemTitle" style="border: solid gray 1px;">過往活動</div>
                         <div class="subItem04Block" id="block02" onclick="SubItem04Control(1)">
 
-                            <div class="subItem04BlockPic"> <img src="img/Event/Lecture01.png" width="180" style="padding: 1vh"></div>
+                            <div class="subItem04BlockPic"> <img src="img/Event/Lecture01.png" width="180"
+                                    style="padding: 1vh"></div>
                             <div class="subItem04BlockText">
                                 <p>講座 - 與日本產業的連結 </p>
                             </div>
@@ -536,7 +587,8 @@
 
                         <div class="subItem04Block" id="block03" onclick="SubItem04Control(2)">
 
-                            <div class="subItem04BlockPic"><img src="img/Event/WorkShop01.png" width="175" style="padding: 1vh"></div>
+                            <div class="subItem04BlockPic"><img src="img/Event/WorkShop01.png" width="175"
+                                    style="padding: 1vh"></div>
 
                             <div class="subItem04BlockText">
                                 <p>遊戲工作坊</p>
@@ -567,16 +619,26 @@
                 </div>
 
                 <div class="subGroupName" id="LableOther">其他資訊</div>
-                <div class="subGroup" id="MainOther">
-                    <div class="subItem">其他資訊</div>
-                    <div class="subItem">其他資訊</div>
-                    <div class="subItem">其他資訊</div>
-                    <div class="subItem">其他資訊</div>
-                    <div class="subItem">其他資訊</div>
+                <div class="ProducerContainer" id="MainOther">
+                    <div class="Producer">
+                        <div class="ProducerPic"><img src="img/sun.png" width="180" style="border-left: 10px;"></div>
+                        <div class="ProducerText"><p>學號: 1082045 姓名:許其彬 <br> 工作: 程式 </p></div>
+                    </div>
+
+                    <div class="Producer">
+                        <div class="ProducerPic"></div>
+                        <div class="ProducerText"></div>
+                    </div>
+
+                    <div class="Producer">
+                        <div class="ProducerPic"></div>
+                        <div class="ProducerText"></div>
+                    </div>
                 </div>
-               <div class="footer">@YZUGC 聯絡我們 電子信箱：yzugamecreat@gmail.com</div>
+                <div class="footer">@YZUGC 聯絡我們 電子信箱：yzugamecreat@gmail.com</div>
             </div>
         </div>
+
         <script>
 
             var LableIntro = document.getElementById("LableIntro");
@@ -596,6 +658,11 @@
 
             var Container = document.getElementById("Container")
 
+            var MenuChoiceSound = new Audio('audio/ChoiceSound.wav');
+            var BackGroundMusic = new Audio('audio/BackGroundMusic.mp3') // 音效
+
+
+
             function HideAllDiv() {
                 LableIntro.style.display = "none";
                 LableHistory.style.display = "none";
@@ -613,9 +680,11 @@
 
             function ShowDiv(name) {
 
-                console.log(name);
-
                 HideAllDiv();
+
+                BackGroundMusic.pause();
+                MenuChoiceSound.play();
+                BackGroundMusic.play();
 
                 switch (name) {
                     case 1:
@@ -655,6 +724,8 @@
                         {
                             LableOther.style.display = "block";
                             MainOther.style.display = "block";
+
+                            Container.style.height = window.innerHeight * 1.26 + 'px';
                             break;
                         }
                 }
@@ -673,7 +744,7 @@
             function HideAll() {
                 for (i = 0; i < 3; i++) {
                     HideObj = document.getElementById(subItem04[i]);
-                    HideObj.style.height = 60+ 'vh';
+                    HideObj.style.height = 60 + 'vh';
                 }
 
                 MainEventInfor.style.height = 146 + 'vh';
@@ -692,6 +763,10 @@
             }
 
             function SubItem04Control(index) {
+
+                BackGroundMusic.pause();
+                MenuChoiceSound.play();
+                BackGroundMusic.play();
 
                 if (!SubHideState[index]) {
 
@@ -736,22 +811,16 @@
                     if (SubHideState[i])
                         Count += 1;
 
-                    console.log(Count);
+
                     SubHight = 150 + Count * 75;
-                    console.log(SubHight);
+
 
                     MainEventInfor.style.height = SubHight + 'vh';
                 }
 
-                console.log(SubHideState[index]);
-
             }
 
-
             // EventInfo控制
-
-
-            // 視窗啟動
 
             //點擊切換大圖
             let gameImages;
@@ -791,6 +860,11 @@
                 gameImages[9].addEventListener('click', function () {
                     bigGameImage[1].src = gameImages[9].src;
                 })
+
+                BackGroundMusic.play();
+                BackGroundMusic.volume = 0.2;
+
+                Container.style.height = window.innerHeight * 1 + 'px';
 
                 HideAllDiv();
                 ShowDiv(1);
