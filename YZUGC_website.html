@@ -19,10 +19,14 @@
             padding: 0;
         }
 
+        .bg {
+            width: 100vw;
+            background-color: #F1F1E6;
+        }
+
         .container {
             margin: 0 auto;
             width: 80vw;
-            background-color: azure;
             display: flex;
             flex-direction: column;
         }
@@ -47,7 +51,6 @@
         }
 
         .topNav {
-            background-color: rgb(14, 166, 236);
             display: flex;
             justify-content: space-around;
             top: 0;
@@ -55,7 +58,7 @@
         }
 
         .navItem {
-            background-color: rgba(27, 10, 10, 0.637);
+            background-color: rgb(30, 72, 102);
             border: 1px solid black;
             flex-basis: 100%;
             font-size: 30px;
@@ -67,7 +70,7 @@
         .subGroupName {
             top: 50px;
             color: black;
-            background-color: rgb(14, 166, 236);
+            background-color: #ACD1F5;
             display: flex;
             justify-content: space-around;
             position: sticky;
@@ -241,7 +244,8 @@
 
         .pageItemArea {
             height: auto;
-            background-color: aqua;
+            background-color: #F1F1E6;
+
         }
 
         .gameSection_content {
@@ -275,7 +279,7 @@
             color: white;
             height: auto;
             text-shadow: black 0.2em 0.1em 0.1em
-            /* border: 3px solid rgba(128, 128, 128, 0.288); */
+                /* border: 3px solid rgba(128, 128, 128, 0.288); */
         }
 
         .aboutUs0 {
@@ -315,255 +319,258 @@
 </head>
 
 <body>
-    <div class="container" id="Container">
-        <div class="header">
-            <img src='img/logo_YZUGC.png' alt="" style="width: 125px;height: 125px;">
-            <p style="position: relative; top: 1px;">元智遊戲創作社官方網站</p>
-        </div>
+    <div class="bg">
 
-        <div class="topNav">
-            <div class="navItem" onclick="ShowDiv(1)">首頁</div>
-            <div class="navItem" onclick="ShowDiv(2)">社團簡介</div>
-            <div class="navItem" onclick="ShowDiv(3)">社團作品</div>
-            <div class="navItem" onclick="ShowDiv(4)">活動資訊</div>
-            <div class="navItem" onclick="ShowDiv(5)">其他資訊</div>
-        </div>
-
-        <div class="article" id="LableAb1">
-
-            <div class="subGroupName" id="LableIntro">首頁</div>
-            <div class="pageItemArea" id="MainIntro">
-
-                <!-- 滑動圖片 -->
-                <div id="carouselExampleCaptions" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/gameScreenshot/TD_screenShot(1).png" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h2>圖片標題</h2>
-                                <p>描述</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/gameScreenshot/TD_screenShot(1).png" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h2>圖片標題</h2>
-                                <p>描述</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="img/gameScreenshot/TD_screenShot(1).png" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h2>圖片標題</h2>
-                                <p>描述</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-
+        <div class="container" id="Container">
+            <div class="header">
+                <img src='img/logo_YZUGC.png' alt="" style="width: 125px;height: 125px;">
+                <p style="position: relative; top: 1px;">元智遊戲創作社官方網站</p>
             </div>
 
-            <div class="subGroupName" id="LableHistory">社團簡介</div>
-            <div class="pageHistory" id="MainHistory">
-                <div class="aboutUs0">關於我們</div>
-
-                <div class="aboutUs1">教導社員製作遊戲大小事</div>
-
-                <div class="aboutUs2" id="LableAb2">舉辦活動增進製作經驗</div>
-
-                <div class="aboutUs3" id="LableAb3">舉辦企業參訪活動連結產業</div>
-            </div>
-            <div class="subGroupName" id="LableAsset">社團作品</div>
-            <div class="pageItemArea" id="MainAsset">
-
-                <div class="gameSection_main">
-                    <div class="gameSection_title">Tower Defender</div>
-                    <iframe class="subitem_vid" src="https://www.youtube.com/embed/L-rarF8k6VU"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                    <div class="gameSection_content">
-                        遊戲簡介：冒險者跟著藏寶圖來到了塔下，但他得通過守護者的重重關卡到達塔頂才能找到神秘的寶藏。<br />
-                        <br />
-                        這是款單機雙人對抗遊戲，身為冒險者(鍵盤)的玩家必須在守護者(滑鼠)的攻擊下在時限內到達塔頂。<br />
-                        <br />
-                        平台：PC<br />
-                        <br />
-                        遊玩人數：2人
-                    </div>
-
-                    <img src="img/gameScreenshot/TD_screenShot(1).png" class="subitem_gameImg">
-                    <img src="img/gameScreenshot/TD_screenShot(5).png" class="subitem_gameImg">
-                    <img src="img/gameScreenshot/TD_screenShot(3).png" class="subitem_gameImg">
-                    <img src="img/gameScreenshot/TD_screenShot(4).png" class="subitem_gameImg">
-                    <img src="img/gameScreenshot/TD_screenShot(2).png" class="subitem_gameImg">
-
-                    <img src="img/gameScreenshot/TD_screenShot(1).png" class="subitem_bigImg">
-                </div>
-
-                <div class="gameSection_main">
-                    <div class="gameSection_title">Tower Defender</div>
-                    <iframe class="subitem_vid" src="https://www.youtube.com/embed/L-rarF8k6VU"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                    <div class="gameSection_content">
-                        遊戲簡介：冒險者跟著藏寶圖來到了塔下，但他得通過守護者的重重關卡到達塔頂才能找到神秘的寶藏。<br />
-                        <br />
-                        這是款單機雙人對抗遊戲，身為冒險者(鍵盤)的玩家必須在守護者(滑鼠)的攻擊下在時限內到達塔頂。<br />
-                        <br />
-                        平台：PC<br />
-                        <br />
-                        遊玩人數：2人
-                    </div>
-
-                    <img src="img/gameScreenshot/TD_screenShot(1).png" class="subitem_gameImg">
-                    <img src="img/gameScreenshot/TD_screenShot(5).png" class="subitem_gameImg">
-                    <img src="img/gameScreenshot/TD_screenShot(3).png" class="subitem_gameImg">
-                    <img src="img/gameScreenshot/TD_screenShot(4).png" class="subitem_gameImg">
-                    <img src="img/gameScreenshot/TD_screenShot(2).png" class="subitem_gameImg">
-
-                    <img src="img/gameScreenshot/TD_screenShot(1).png" class="subitem_bigImg">
-                </div>
-
+            <div class="topNav">
+                <div class="navItem" onclick="ShowDiv(1)">首頁</div>
+                <div class="navItem" onclick="ShowDiv(2)">社團簡介</div>
+                <div class="navItem" onclick="ShowDiv(3)">社團作品</div>
+                <div class="navItem" onclick="ShowDiv(4)">活動資訊</div>
+                <div class="navItem" onclick="ShowDiv(5)">其他資訊</div>
             </div>
 
-            <div class="subGroupName" id="LableEventInfor">活動資訊</div>
-            <div class="subGroup04" id="MainEventInfor">
+            <div class="article" id="LableAb1">
 
-                <div class="subItem04" id="subItem04_01">
+                <div class="subGroupName" id="LableIntro">首頁</div>
+                <div class="pageItemArea" id="MainIntro">
 
-                    <div class="subItemTitle" style="border: solid gray 1px;">即將舉辦</div>
-                    <div class="subItem04Block" id="block01" onclick="SubItem04Control(0)">
+                    <!-- 滑動圖片 -->
+                    <div id="carouselExampleCaptions" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/gameScreenshot/TD_screenShot(1).png" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h2>圖片標題</h2>
+                                    <p>描述</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/gameScreenshot/TD_screenShot(1).png" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h2>圖片標題</h2>
+                                    <p>描述</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/gameScreenshot/TD_screenShot(1).png" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h2>圖片標題</h2>
+                                    <p>描述</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
 
-                        <div class="subItem04BlockPic"> <img src="img/Event/GameJam.jpg" width="180"></div>
+                </div>
 
-                        <div class="subItem04BlockText">
-                            <p>
-                                跨校聯合Game Jam <br>
+                <div class="subGroupName" id="LableHistory">社團簡介</div>
+                <div class="pageHistory" id="MainHistory">
+                    <div class="aboutUs0">關於我們</div>
 
-                                參加對象：對遊戲製作有興趣之學生以及業界人士 <br>
+                    <div class="aboutUs1">教導社員製作遊戲大小事</div>
 
-                                報名費用：免費
-                            </p>
+                    <div class="aboutUs2" id="LableAb2">舉辦活動增進製作經驗</div>
+
+                    <div class="aboutUs3" id="LableAb3">舉辦企業參訪活動連結產業</div>
+                </div>
+                <div class="subGroupName" id="LableAsset">社團作品</div>
+                <div class="pageItemArea" id="MainAsset">
+
+                    <div class="gameSection_main">
+                        <div class="gameSection_title">Tower Defender 高塔入侵者</div>
+                        <iframe class="subitem_vid" src="https://www.youtube.com/embed/L-rarF8k6VU"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <div class="gameSection_content">
+                            遊戲簡介：冒險者跟著藏寶圖來到了塔下，但他得通過守護者的重重關卡到達塔頂才能找到神秘的寶藏。<br />
+                            <br />
+                            這是款單機雙人對抗遊戲，身為冒險者(鍵盤)的玩家必須在守護者(滑鼠)的攻擊下在時限內到達塔頂。<br />
+                            <br />
+                            平台：PC<br />
+                            <br />
+                            遊玩人數：2人
                         </div>
 
+                        <img src="img/gameScreenshot/TD_screenShot(1).png" class="subitem_gameImg">
+                        <img src="img/gameScreenshot/TD_screenShot(5).png" class="subitem_gameImg">
+                        <img src="img/gameScreenshot/TD_screenShot(3).png" class="subitem_gameImg">
+                        <img src="img/gameScreenshot/TD_screenShot(4).png" class="subitem_gameImg">
+                        <img src="img/gameScreenshot/TD_screenShot(2).png" class="subitem_gameImg">
+
+                        <img src="img/gameScreenshot/TD_screenShot(1).png" class="subitem_bigImg">
                     </div>
 
-                    <div class="subItem04Hide" id="hide01">
+                    <div class="gameSection_main">
+                        <div class="gameSection_title">Hide and Seek 捉迷藏</div>
+                        <iframe class="subitem_vid" src="https://www.youtube.com/embed/gVyLDi2KmXE"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <div class="gameSection_content">
+                            遊戲簡介：在一個平凡的午後，女主在家中和妹妹玩著捉迷藏，3...2...1...妹妹會躲在哪裡呢？<br />
+                            <br />
+                            這是款2.5D微恐怖解謎遊戲，玩家要在家中探索，找尋妹妹的蹤跡。<br />
+                            <br />
+                            平台：PC<br />
+                            <br />
+                            下載連結：<a href="https://mark0216.itch.io/hide-and-seek?secret=J4tbPvjda5mmfo2ywrGmnF677Q&fbclid=IwAR29KI6gpYe0UXvyKQ0Xaj2i1qe6T1BozdbMy-twodx63mp-c8IzhA8_E4g
+                        ">Itch.io</a>
+                        </div>
 
-                        <div class="subItem04HideItem" id="hide01_01">
-                            <div class="subItem04HideItemText" style="font-size: 30px;">
+                        <img src="img/gameScreenshot/HaS_screenshot(5).png" class="subitem_gameImg">
+                        <img src="img/gameScreenshot/HaS_screenshot(4).png" class="subitem_gameImg">
+                        <img src="img/gameScreenshot/HaS_screenshot(6).png" class="subitem_gameImg">
+                        <img src="img/gameScreenshot/HaS_screenshot(2).png" class="subitem_gameImg">
+                        <img src="img/gameScreenshot/HaS_screenshot(1).png" class="subitem_gameImg">
+
+                        <img src="img/gameScreenshot/HaS_screenshot(5).png" class="subitem_bigImg">
+                    </div>
+
+                </div>
+
+                <div class="subGroupName" id="LableEventInfor">活動資訊</div>
+                <div class="subGroup04" id="MainEventInfor">
+
+                    <div class="subItem04" id="subItem04_01">
+
+                        <div class="subItemTitle" style="border: solid gray 1px;">即將舉辦</div>
+                        <div class="subItem04Block" id="block01" onclick="SubItem04Control(0)">
+
+                            <div class="subItem04BlockPic"> <img src="img/Event/GameJam.jpg" width="180"></div>
+
+                            <div class="subItem04BlockText">
                                 <p>
-                                    所有參加者將進行分組，透過組別合作與討論於三天的時間內創作出符合主題的遊戲，並於最後進行各組的成果發表。
+                                    跨校聯合Game Jam <br>
 
-                                    <a
-                                        href="https://docs.google.com/forms/d/1F74aTGsMc9FSSXIedcBpvJjComjkxjvwzwAxee4w6Wc/viewform?fbclid=IwAR1fIrnSmkAr7v7vppyXA_zRklnyI8ub6p71DBw7IsjDY5CAw-1eDWsrYyA&edit_requested=true">報名連結</a>
+                                    參加對象：對遊戲製作有興趣之學生以及業界人士 <br>
+
+                                    報名費用：免費
                                 </p>
                             </div>
-                        </div>
-                    </div>
 
+                        </div>
+
+                        <div class="subItem04Hide" id="hide01">
+
+                            <div class="subItem04HideItem" id="hide01_01">
+                                <div class="subItem04HideItemText" style="font-size: 30px;">
+                                    <p>
+                                        所有參加者將進行分組，透過組別合作與討論於三天的時間內創作出符合主題的遊戲，並於最後進行各組的成果發表。
+
+                                        <a
+                                            href="https://docs.google.com/forms/d/1F74aTGsMc9FSSXIedcBpvJjComjkxjvwzwAxee4w6Wc/viewform?fbclid=IwAR1fIrnSmkAr7v7vppyXA_zRklnyI8ub6p71DBw7IsjDY5CAw-1eDWsrYyA&edit_requested=true">報名連結</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 01 -->
+
+                    <div class="subItem04" id="subItem04_02">
+
+                        <div class="subItemTitle" style="border: solid gray 1px;">過去活動</div>
+                        <div class="subItem04Block" id="block02" onclick="SubItem04Control(1)">
+
+                            <div class="subItem04BlockPic"> <img src="img/Event/Lecture01.png" width="180"></div>
+
+                            <div class="subItem04BlockText">
+                                <p>講座 - 與日本產業的連結 </p>
+                            </div>
+
+                        </div>
+
+                        <div class="subItem04Hide" id="hide02">
+
+                            <div class="subItem04HideItem" id="hide02_01">
+                                <div class="subItem04HideItemPic">
+                                    <img src="img/Event/Lecture02.jpg" width="250">
+                                    <p> &nbsp; &nbsp; &nbsp;</p>
+                                    <img src="img/Event/Lecture03.jpg" width="250">
+                                </div>
+                                <div class="subItem04HideItemText" style="font-size: 25px;">
+                                    <p>我們邀請到日本CyberConnect 2株式會社的代表取締役兼遊戲製作人
+                                        松山洋先生與唯晶科技日本商務區負責人 片野秋男先生為我們帶來
+                                        「台灣與日本遊戲產業的連結」講座，不僅為大家解惑日本和台灣
+                                        遊戲產業的差異，也將告訴大家如何進入日本遊戲產業，即便是現有
+                                        的遊戲工作室也可以與日本的遊戲廠商進行商業合作！</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 02 -->
+
+                    <div class="subItem04" id="subItem04_03">
+
+                        <div class="subItem04Block" id="block03" onclick="SubItem04Control(2)">
+
+                            <div class="subItem04BlockPic"><img src="img/Event/WorkShop01.png" width="175"></div>
+
+                            <div class="subItem04BlockText">
+                                <p>遊戲工作坊</p>
+                            </div>
+
+                        </div>
+
+                        <div class="subItem04Hide" id="hide03">
+
+                            <div class="subItem04HideItem" id="hide03_01">
+                                <div class="subItem04HideItemPic">
+                                    <img src="img/Event/WorkShop02.jpg" width="250">
+                                    <p> &nbsp; &nbsp; &nbsp;</p>
+                                    <img src="img/Event/WorkShop03.jpg" width="250">
+                                </div>
+                                <div class="subItem04HideItemText" style="font-size: 25px;">
+                                    <p>
+                                        這次工作坊我們分成了兩堂課程，第一堂課是教大家關於聲音的基礎知識，以及如何使用工具製作音效，
+                                        第二堂則是邀請了侍達遊戲藝術的創辦人，刃霧翔大大來為我們分享關於遊戲製作的經驗以及企畫方面的進階知識，
+                                        整個活動下來真的學到很多呢！
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 03 -->
                 </div>
-                <!-- 01 -->
 
-                <div class="subItem04" id="subItem04_02">
-
-                    <div class="subItemTitle" style="border: solid gray 1px;">過去活動</div>
-                    <div class="subItem04Block" id="block02" onclick="SubItem04Control(1)">
-
-                        <div class="subItem04BlockPic"> <img src="img/Event/Lecture01.png" width="180"></div>
-
-                        <div class="subItem04BlockText">
-                            <p>講座 - 與日本產業的連結 </p>
-                        </div>
-
-                    </div>
-
-                    <div class="subItem04Hide" id="hide02">
-
-                        <div class="subItem04HideItem" id="hide02_01">
-                            <div class="subItem04HideItemPic">
-                                <img src="img/Event/Lecture02.jpg" width="250">
-                                <p> &nbsp; &nbsp; &nbsp;</p>
-                                <img src="img/Event/Lecture03.jpg" width="250">
-                            </div>
-                            <div class="subItem04HideItemText" style="font-size: 25px;">
-                                <p>我們邀請到日本CyberConnect 2株式會社的代表取締役兼遊戲製作人
-                                    松山洋先生與唯晶科技日本商務區負責人 片野秋男先生為我們帶來
-                                    「台灣與日本遊戲產業的連結」講座，不僅為大家解惑日本和台灣
-                                    遊戲產業的差異，也將告訴大家如何進入日本遊戲產業，即便是現有
-                                    的遊戲工作室也可以與日本的遊戲廠商進行商業合作！</p>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="subGroupName" id="LableOther">其他資訊</div>
+                <div class="subGroup" id="MainOther">
+                    <div class="subItem">其他資訊</div>
+                    <div class="subItem">其他資訊</div>
+                    <div class="subItem">其他資訊</div>
+                    <div class="subItem">其他資訊</div>
+                    <div class="subItem">其他資訊</div>
                 </div>
-                <!-- 02 -->
-
-                <div class="subItem04" id="subItem04_03">
-
-                    <div class="subItem04Block" id="block03" onclick="SubItem04Control(2)">
-
-                        <div class="subItem04BlockPic"><img src="img/Event/WorkShop01.png" width="175"></div>
-
-                        <div class="subItem04BlockText">
-                            <p>遊戲工作坊</p>
-                        </div>
-
-                    </div>
-
-                    <div class="subItem04Hide" id="hide03">
-
-                        <div class="subItem04HideItem" id="hide03_01">
-                            <div class="subItem04HideItemPic">
-                                <img src="img/Event/WorkShop02.jpg" width="250">
-                                <p> &nbsp; &nbsp; &nbsp;</p>
-                                <img src="img/Event/WorkShop03.jpg" width="250">
-                            </div>
-                            <div class="subItem04HideItemText" style="font-size: 25px;">
-                                <p>
-                                    這次工作坊我們分成了兩堂課程，第一堂課是教大家關於聲音的基礎知識，以及如何使用工具製作音效，
-                                    第二堂則是邀請了侍達遊戲藝術的創辦人，刃霧翔大大來為我們分享關於遊戲製作的經驗以及企畫方面的進階知識，
-                                    整個活動下來真的學到很多呢！
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- 03 -->
+                <div class="footer">@YZUGC 聯絡我們 電子信箱：yzugamecreat@gmail.com</div>
             </div>
-
-            <div class="subGroupName" id="LableOther">其他資訊</div>
-            <div class="subGroup" id="MainOther">
-                <div class="subItem">其他資訊</div>
-                <div class="subItem">其他資訊</div>
-                <div class="subItem">其他資訊</div>
-                <div class="subItem">其他資訊</div>
-                <div class="subItem">其他資訊</div>
-            </div>
-            <div class="footer">@YZUGC 聯絡我們 電子信箱：yzugamecreat@gmail.com</div>
         </div>
-
         <script>
 
             var LableIntro = document.getElementById("LableIntro");
