@@ -261,9 +261,14 @@
             border: 3px solid gray;
         }
 
+        .pageHistory
+        {
+            height: 320vh;
+        }
+
         .aboutUs0 {
             background: center/ cover no-repeat url("img/gameScreenshot/TD_screenShot\(1\).png");
-            height: 645.63px;
+            height: 80vh;
             width: 100%;
             display: flex;
             align-items: center;
@@ -275,7 +280,7 @@
 
         .aboutUs1 {
             background: center/ cover no-repeat url("img/gameScreenshot/TD_screenShot\(1\).png");
-            height: 645.63px;
+            height: 80vh;
             width: 100%;
             display: flex;
             align-items: center;
@@ -286,7 +291,7 @@
 
         .aboutUs2 {
             background: center/ cover no-repeat url("img/gameScreenshot/TD_screenShot\(1\).png");
-            height: 645.63px;
+            height: 80vh;
             width: 100%;
             font-size: 20px;
             color: white;
@@ -298,7 +303,7 @@
 
         .aboutUs3 {
             background: center/ cover no-repeat url("img/gameScreenshot/TD_screenShot\(1\).png");
-            height: 645.63px;
+            height: 80vh;
             width: 100%;
             display: flex;
             align-items: center;
@@ -380,10 +385,8 @@
             </div>
         </div>
 
-
-
         <div class="subGroupName" id="LableHistory">社團歷史</div>
-        <div class="subGroup" id="MainHistory">
+        <div class="pageHistory" id="MainHistory">
             <div class="aboutUs0">關於我們</div>
 
             <div class="aboutUs1">關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於</div>
@@ -392,7 +395,7 @@
                 <p>關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於</p>
             </div>
 
-            <div class="aboutUs3" id="LableAb3">關於關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於</div>
+            <div class="aboutUs3" id="LableAb3">關於關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於</div> -->
         </div>
         <div class="subGroupName" id="LableAsset">社團作品</div>
         <div class="pageItemArea" id="MainAsset">
@@ -576,10 +579,6 @@
         var LableOther = document.getElementById("LableOther");
         var MainOther = document.getElementById("MainOther"); // 其他資訊
 
-        var LableAb1 = document.getElementById("LableAb1");
-        var LableAb2 = document.getElementById("LableAb2");
-        var LableAb3 = document.getElementById("LableAb3");
-
         var Container = document.getElementById("Container")
 
         function HideAllDiv() {
@@ -594,10 +593,6 @@
             MainAsset.style.display = "none";
             MainEventInfor.style.display = "none";
             MainOther.style.display = "none";
-
-            LableAb1.style.display = "none";
-            LableAb2.style.display = "none";
-            LableAb3.style.display = "none";
         }
         // 全頁面關閉 
 
