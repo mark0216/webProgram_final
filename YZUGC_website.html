@@ -177,7 +177,7 @@
         .subItem04HideItemText {
 
             height: 30vh;
-            width: 120%;
+            width: 80%;
             padding: 7vh;
 
             /* 本體*/
@@ -654,6 +654,8 @@
 
         var subItem04 = ["subItem04_01", "subItem04_02", "subItem04_03"]
         var SubHide = ["hide01", "hide02", "hide03"];
+        var Count;
+        var SubHight = 0;
         var SubHideState = [false, false, false]
         var SubHideItem = ["hide01_01", "hide02_01", "hide03_01"]
         var HideObj;
@@ -684,7 +686,7 @@
 
             if (!SubHideState[index]) {
 
-                MainEventInfor.style.height = 270 + 'vh';
+                // MainEventInfor.style.height = 270 + 'vh';
                 HideObj = document.getElementById(subItem04[index]);
                 HideObj.style.height = 90 + 'vh';
 
@@ -708,7 +710,29 @@
                 HideObj.style.height = 0 + 'vh';
                 HideObj.style.display = "none";
 
+                HideObj = document.getElementById(subItem04[index]);
+                HideObj.style.height = 35 + 'vh';
+
                 SubHideState[index] = false;
+            }
+
+            // if(!SubHideState[0] && !SubHideState[1] && !SubHideState[2] )
+            // {
+            //     MainEventInfor.style.height = 106 + 'vh';
+            // }
+
+            Count = 0;
+
+            for(i = 0;i < 3;i++)
+            {
+                if(SubHideState[i])
+                Count+=1;
+
+                console.log(Count);
+                SubHight = 106 + Count*55;
+                console.log(SubHight);
+
+                MainEventInfor.style.height = SubHight + 'vh';
             }
 
             console.log(SubHideState[index]);
