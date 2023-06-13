@@ -21,7 +21,7 @@
 
         .bg {
             width: 100vw;
-            background-color: #F1F1E6;
+            /* background-color: #F1F1E6; */
         }
 
         .container {
@@ -29,6 +29,9 @@
             width: 80vw;
             display: flex;
             flex-direction: column;
+
+            background-color: #F1F1E6;
+            width: 120vw;
         }
 
         .body {
@@ -90,7 +93,7 @@
 
             height: 90vh;
             /* background-color: red; */
-            border: solid gray 1px;
+            /* border: solid gray 1px; */
 
             /* 本體*/
             display: flex;
@@ -101,12 +104,14 @@
         .subItemTitle {
             font-size: 30px;
             font-weight: bold;
+
+            padding: 2vh;
         }
 
         .subItem04Block {
 
-            height: 35vh;
-            padding: 20px;
+            height: 40vh;
+            padding: 15vh;
 
             /* 本體*/
 
@@ -133,7 +138,7 @@
         }
 
         .subItem04BlockText {
-            width: 70vw;
+            width: 40vw;
             /* 本體*/
 
             display: flex;
@@ -144,11 +149,14 @@
 
         .subItem04Hide {
             height: 65vh;
+            padding: 12vh;
             /* 本體*/
 
             display: flex;
             flex-direction: column;
             /* flex*/
+
+            border: 8px solid black;
         }
 
         .subItem04HideItem {
@@ -161,7 +169,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            border: 8px solid black;
+            /* border: 8px solid black; */
             /* flex*/
         }
 
@@ -174,7 +182,7 @@
 
             display: flex;
             flex-direction: row;
-            justify-content: left;
+            justify-content: center;
             align-items: center;
         }
 
@@ -464,14 +472,12 @@
                         <div class="subItemTitle" style="border: solid gray 2px;">即將舉辦</div>
                         <div class="subItem04Block" id="block01" onclick="SubItem04Control(0)">
 
-                            <div class="subItem04BlockPic"> <img src="img/Event/GameJam.jpg" width="180"></div>
+                            <div class="subItem04BlockPic"> <img src="img/Event/GameJam.jpg" width="180" style="padding: 1vh"></div>
 
                             <div class="subItem04BlockText">
                                 <p>
-                                    跨校聯合Game Jam <br>
-                                    <br>
-                                    參加對象：對遊戲製作有興趣之學生以及業界人士 <br>
-                                    <br>
+                                    跨校聯合Game Jam <br>      
+                                    參加對象：對遊戲製作有興趣之學生以及業界人士 <br>            
                                     報名費用：免費
                                 </p>
                             </div>
@@ -481,12 +487,10 @@
                         <div class="subItem04Hide" id="hide01">
 
                             <div class="subItem04HideItem" id="hide01_01">
-                                <div class="subItem04HideItemText" style="font-size: 30px;">
+                                <div class="subItem04HideItemText" style="font-size: 20px;">
                                     <p>
                                         活動內容：所有參加者將進行分組，透過組別合作與討論於三天的時間內創作出符合主題的遊戲，並於最後進行各組的成果發表。<br>
-                                        <br>                                
-                                        <a
-                                            href="https://docs.google.com/forms/d/1F74aTGsMc9FSSXIedcBpvJjComjkxjvwzwAxee4w6Wc/viewform?fbclid=IwAR1fIrnSmkAr7v7vppyXA_zRklnyI8ub6p71DBw7IsjDY5CAw-1eDWsrYyA&edit_requested=true">報名連結</a>
+                                        <a href="https://docs.google.com/forms/d/1F74aTGsMc9FSSXIedcBpvJjComjkxjvwzwAxee4w6Wc/viewform?fbclid=IwAR1fIrnSmkAr7v7vppyXA_zRklnyI8ub6p71DBw7IsjDY5CAw-1eDWsrYyA&edit_requested=true">報名連結</a>
                                     </p>
                                 </div>
                             </div>
@@ -500,8 +504,7 @@
                         <div class="subItemTitle" style="border: solid gray 1px;">過往活動</div>
                         <div class="subItem04Block" id="block02" onclick="SubItem04Control(1)">
 
-                            <div class="subItem04BlockPic"> <img src="img/Event/Lecture01.png" width="180"></div>
-
+                            <div class="subItem04BlockPic"> <img src="img/Event/Lecture01.png" width="180" style="padding: 1vh"></div>
                             <div class="subItem04BlockText">
                                 <p>講座 - 與日本產業的連結 </p>
                             </div>
@@ -516,7 +519,7 @@
                                     <p> &nbsp; &nbsp; &nbsp;</p>
                                     <img src="img/Event/Lecture03.jpg" width="250">
                                 </div>
-                                <div class="subItem04HideItemText" style="font-size: 25px;">
+                                <div class="subItem04HideItemText" style="font-size: 20px;">
                                     <p>我們邀請到日本CyberConnect 2株式會社的代表取締役兼遊戲製作人
                                         松山洋先生與唯晶科技日本商務區負責人 片野秋男先生為我們帶來
                                         「台灣與日本遊戲產業的連結」講座，不僅為大家解惑日本和台灣
@@ -533,7 +536,7 @@
 
                         <div class="subItem04Block" id="block03" onclick="SubItem04Control(2)">
 
-                            <div class="subItem04BlockPic"><img src="img/Event/WorkShop01.png" width="175"></div>
+                            <div class="subItem04BlockPic"><img src="img/Event/WorkShop01.png" width="175" style="padding: 1vh"></div>
 
                             <div class="subItem04BlockText">
                                 <p>遊戲工作坊</p>
@@ -545,11 +548,11 @@
 
                             <div class="subItem04HideItem" id="hide03_01">
                                 <div class="subItem04HideItemPic">
-                                    <img src="img/Event/WorkShop02.jpg" width="250">
+                                    <img src="img/Event/WorkShop02.jpg" width="200">
                                     <p> &nbsp; &nbsp; &nbsp;</p>
-                                    <img src="img/Event/WorkShop03.jpg" width="250">
+                                    <img src="img/Event/WorkShop03.jpg" width="200">
                                 </div>
-                                <div class="subItem04HideItemText" style="font-size: 25px;">
+                                <div class="subItem04HideItemText" style="font-size: 20px;">
                                     <p>
                                         這次工作坊我們分成了兩堂課程，第一堂課是教大家關於聲音的基礎知識，以及如何使用工具製作音效，
                                         第二堂則是邀請了侍達遊戲藝術的創辦人，刃霧翔大大來為我們分享關於遊戲製作的經驗以及企畫方面的進階知識，
@@ -571,8 +574,10 @@
                     <div class="subItem">其他資訊</div>
                     <div class="subItem">其他資訊</div>
                 </div>
-                <div class="footer">@YZUGC 聯絡我們 電子信箱：yzugamecreat@gmail.com</div>
+               <div class="footer">@YZUGC 聯絡我們 電子信箱：yzugamecreat@gmail.com</div>
             </div>
+
+             
         </div>
         <script>
 
@@ -644,7 +649,7 @@
                             MainEventInfor.style.display = "block";
                             HideAll();
 
-                            // Container.style.height = window.innerHeight * 1.5 + 'px';
+                            Container.style.height = window.innerHeight * 2 + 'px';
                             break;
                         }
 
@@ -670,10 +675,10 @@
             function HideAll() {
                 for (i = 0; i < 3; i++) {
                     HideObj = document.getElementById(subItem04[i]);
-                    HideObj.style.height = 35 + 'vh';
+                    HideObj.style.height = 60+ 'vh';
                 }
 
-                MainEventInfor.style.height = 106 + 'vh';
+                MainEventInfor.style.height = 146 + 'vh';
 
                 for (i = 0; i < 3; i++) {
                     HideObj = document.getElementById(SubHide[i]);
@@ -694,14 +699,14 @@
 
                     // MainEventInfor.style.height = 270 + 'vh';
                     HideObj = document.getElementById(subItem04[index]);
-                    HideObj.style.height = 90 + 'vh';
+                    HideObj.style.height = 120 + 'vh';
 
                     HideObj = document.getElementById(SubHide[index]);
-                    HideObj.style.height = 35 + 'vh';
+                    HideObj.style.height = 70 + 'vh';
                     HideObj.style.display = "block";
 
                     HideObj = document.getElementById(SubHideItem[index]);
-                    HideObj.style.height = 65 + 'vh';
+                    HideObj.style.height = 80 + 'vh';
                     HideObj.style.display = "block";
 
                     SubHideState[index] = true;
@@ -717,7 +722,7 @@
                     HideObj.style.display = "none";
 
                     HideObj = document.getElementById(subItem04[index]);
-                    HideObj.style.height = 35 + 'vh';
+                    HideObj.style.height = 50 + 'vh';
 
                     SubHideState[index] = false;
                 }
@@ -734,7 +739,7 @@
                         Count += 1;
 
                     console.log(Count);
-                    SubHight = 106 + Count * 55;
+                    SubHight = 150 + Count * 75;
                     console.log(SubHight);
 
                     MainEventInfor.style.height = SubHight + 'vh';
@@ -788,6 +793,7 @@
                 gameImages[9].addEventListener('click', function () {
                     bigGameImage[1].src = gameImages[9].src;
                 })
+
                 HideAllDiv();
                 ShowDiv(1);
             }
