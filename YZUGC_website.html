@@ -75,7 +75,7 @@
         }
 
         .subGroup04 {
-            height: 300vh;
+            height: 270vh;
             display: flex;
             flex-direction: row;
             gap: 3vh;
@@ -84,58 +84,62 @@
 
         .subItem04 {
 
-            height: 100vh;
+            height: 90vh;
             /* background-color: red; */
-
-            /* padding: 10px; */
             border: solid gray 1px;
 
             /* 本體*/
-
             display: flex;
             flex-direction: column;
             /* flex*/
         }
 
+        .subItemTitle {
+            height: 3vh;
+            font-size: 20px;
+        }
+
         .subItem04Block {
-            height: 40vh;
 
+            height: 35vh;
             padding: 20px;
-
-            /* background-color: blue;*/
 
             /* 本體*/
 
+            font-size: 30px;
+
+            /* 文字 */
+
             display: flex;
             flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
             /* flex*/
         }
 
         .subItem04BlockPic {
             width: 30vw;
             /* 本體*/
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
 
         .subItem04BlockText {
             width: 70vw;
             /* 本體*/
-        }
-
-        .subItem04Hide {
-            height: 20vh;
-
-            padding: 20px;
-            /* 本體*/
 
             display: flex;
             flex-direction: row;
-            /* flex*/
+            justify-content: left;
+            align-items: center;
         }
 
-        .subItem04HideItem {
-
-            height: 50vh;
-
+        .subItem04Hide {
+            height: 65vh;
             /* 本體*/
 
             display: flex;
@@ -143,19 +147,45 @@
             /* flex*/
         }
 
+        .subItem04HideItem {
+
+            height: 0vh;
+            width: 66vw;
+
+            /* 本體*/
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* flex*/
+        }
+
         .subItem04HideItemPic {
 
             height: 20vh;
+            padding: 8vh;
 
             /* 本體*/
+
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
         }
 
         .subItem04HideItemText {
 
             height: 30vh;
+            width: 120%;
+            padding: 7vh;
 
             /* 本體*/
 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
 
         .footer {
@@ -261,11 +291,11 @@
             font-size: 20px;
             color: white;
             border: 3px solid gray;
-            justify-content: center;
-            align-items: center;
+
             text-align: right;
+            padding-top: 30%;
         }
-        
+
         .aboutUs3 {
             background: center/ cover no-repeat url("img/gameScreenshot/TD_screenShot\(1\).png");
             height: 645.63px;
@@ -274,13 +304,13 @@
             align-items: center;
             font-size: 20px;
             color: white;
-            border: 3px solid gray;            
+            border: 3px solid gray;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="Container">
         <div class="header">
             <img src='img/logo_YZUGC.png' alt="" style="width: 125px;height: 125px;">
             <p style="position: relative; top: 1px;">元智遊戲創作社官方網站</p>
@@ -294,7 +324,7 @@
             <div class="navItem" onclick="ShowDiv(5)">其他資訊</div>
         </div>
 
-        <div class="article">
+        <div class="article" id="LableAb1">
             <div class="group">
 
                 <div class="subGroupName" id="LableIntro">首頁</div>
@@ -352,9 +382,11 @@
             </div>
         </div>
 
-        <div class="aboutUs2">關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於</div>
+        <div class="aboutUs2" id="LableAb2">
+            <p>關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於</p>
+        </div>
 
-        <div class="aboutUs3">關於關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於</div>
+        <div class="aboutUs3" id="LableAb3">關於關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於關於我們關於我們關於</div>
 
         <div class="subGroupName" id="LableHistory">社團歷史</div>
         <div class="subGroup" id="MainHistory">
@@ -413,41 +445,109 @@
 
         <div class="subGroupName" id="LableEventInfor">活動資訊</div>
         <div class="subGroup04" id="MainEventInfor">
-            <div class="subItem04" id="subItem04_1">
-                <div class="subItem04Block" onclick="GroupShow(0)">
-                    <div class="subItem04BlockPic"></div>
-                    <div class="subItem04BlockText"></div>
-                </div>
-                <div class="subItem04Hide" id="HideEventInfor_01">
-                    <div class="subItem04HideItem">
-                        <div class="subItem04HideItemPic"></div>
-                        <div class="subItem04HideItemText"></div>
+
+            <div class="subItem04" id="subItem04_01">
+
+                <div class="subItemTitle" style="border: solid gray 1px;">即將舉辦</div>
+                <div class="subItem04Block" id="block01" onclick="SubItem04Control(0)">
+
+                    <div class="subItem04BlockPic"> <img src="img/Event/GameJam.jpg" width="180"></div>
+
+                    <div class="subItem04BlockText">
+                        <p>
+                            跨校聯合Game Jam <br>
+
+                            參加對象：對遊戲製作有興趣之學生以及業界人士 <br>
+
+                            報名費用：免費
+                        </p>
                     </div>
-                    <div class="subItem04HideItem">
-                        <div class="subItem04HideItemPic"></div>
-                        <div class="subItem04HideItemText"></div>
+
+                </div>
+
+                <div class="subItem04Hide" id="hide01">
+
+                    <div class="subItem04HideItem" id="hide01_01">
+                        <div class="subItem04HideItemText" style="font-size: 30px;">
+                            <p>
+                                所有參加者將進行分組，透過組別合作與討論於三天的時間內創作出符合主題的遊戲，並於最後進行各組的成果發表。
+
+                                <a
+                                    href="https://docs.google.com/forms/d/1F74aTGsMc9FSSXIedcBpvJjComjkxjvwzwAxee4w6Wc/viewform?fbclid=IwAR1fIrnSmkAr7v7vppyXA_zRklnyI8ub6p71DBw7IsjDY5CAw-1eDWsrYyA&edit_requested=true">報名連結</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
+
             </div>
             <!-- 01 -->
 
-            <div class="subItem04" id="subItem04_2">
-                <div class="subItem04Block" onclick="GroupShow(1)">
-                    <div class="subItem04BlockPic"></div>
-                    <div class="subItem04BlockText"></div>
-                </div>
-                <div class="subItem04Hide" id="HideEventInfor_02">
-                    <div class="subItem04HideItem">
-                        <div class="subItem04HideItemPic"></div>
-                        <div class="subItem04HideItemText"></div>
+            <div class="subItem04" id="subItem04_02">
+
+                <div class="subItemTitle" style="border: solid gray 1px;">過去活動</div>
+                <div class="subItem04Block" id="block02" onclick="SubItem04Control(1)">
+
+                    <div class="subItem04BlockPic"> <img src="img/Event/Lecture01.png" width="180"></div>
+
+                    <div class="subItem04BlockText">
+                        <p>講座 - 與日本產業的連結 </p>
                     </div>
-                    <div class="subItem04HideItem">
-                        <div class="subItem04HideItemPic"></div>
-                        <div class="subItem04HideItemText"></div>
+
+                </div>
+
+                <div class="subItem04Hide" id="hide02">
+
+                    <div class="subItem04HideItem" id="hide02_01">
+                        <div class="subItem04HideItemPic">
+                            <img src="img/Event/Lecture02.jpg" width="250">
+                            <p> &nbsp; &nbsp; &nbsp;</p>
+                            <img src="img/Event/Lecture03.jpg" width="250">
+                        </div>
+                        <div class="subItem04HideItemText" style="font-size: 25px;">
+                            <p>我們邀請到日本CyberConnect 2株式會社的代表取締役兼遊戲製作人
+                                松山洋先生與唯晶科技日本商務區負責人 片野秋男先生為我們帶來
+                                「台灣與日本遊戲產業的連結」講座，不僅為大家解惑日本和台灣
+                                遊戲產業的差異，也將告訴大家如何進入日本遊戲產業，即便是現有
+                                的遊戲工作室也可以與日本的遊戲廠商進行商業合作！</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
             <!-- 02 -->
+
+            <div class="subItem04" id="subItem04_03">
+
+                <div class="subItem04Block" id="block03" onclick="SubItem04Control(2)">
+
+                    <div class="subItem04BlockPic"><img src="img/Event/WorkShop01.png" width="175"></div>
+
+                    <div class="subItem04BlockText">
+                        <p>遊戲工作坊</p>
+                    </div>
+
+                </div>
+
+                <div class="subItem04Hide" id="hide03">
+
+                    <div class="subItem04HideItem" id="hide03_01">
+                        <div class="subItem04HideItemPic">
+                            <img src="img/Event/WorkShop02.jpg" width="250">
+                            <p> &nbsp; &nbsp; &nbsp;</p>
+                            <img src="img/Event/WorkShop03.jpg" width="250">
+                        </div>
+                        <div class="subItem04HideItemText" style="font-size: 25px;">
+                            <p>
+                                這次工作坊我們分成了兩堂課程，第一堂課是教大家關於聲音的基礎知識，以及如何使用工具製作音效，
+                                第二堂則是邀請了侍達遊戲藝術的創辦人，刃霧翔大大來為我們分享關於遊戲製作的經驗以及企畫方面的進階知識，
+                                整個活動下來真的學到很多呢！
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 03 -->
         </div>
 
         <div class="subGroupName" id="LableOther">其他資訊</div>
@@ -478,6 +578,11 @@
         var LableOther = document.getElementById("LableOther");
         var MainOther = document.getElementById("MainOther"); // 其他資訊
 
+        var LableAb1 = document.getElementById("LableAb1");
+        var LableAb2 = document.getElementById("LableAb2");
+        var LableAb3 = document.getElementById("LableAb3");
+
+        var Container = document.getElementById("Container")
 
         function HideAllDiv() {
             LableIntro.style.display = "none";
@@ -491,6 +596,10 @@
             MainAsset.style.display = "none";
             MainEventInfor.style.display = "none";
             MainOther.style.display = "none";
+
+            LableAb1.style.display = "none";
+            LableAb2.style.display = "none";
+            LableAb3.style.display = "none";
         }
         // 全頁面關閉 
 
@@ -503,8 +612,9 @@
             switch (name) {
                 case 1:
                     {
-                        LableIntro.style.display = "block";
-                        MainIntro.style.display = "block";
+                        LableAb1.style.display = "block";
+                        LableAb2.style.display = "block";
+                        LableAb3.style.display = "block";
                         break;
                     }
 
@@ -526,7 +636,9 @@
                     {
                         LableEventInfor.style.display = "block";
                         MainEventInfor.style.display = "block";
-                        GroupHide();
+                        HideAll();
+
+                        // Container.style.height = window.innerHeight * 1.5 + 'px';
                         break;
                     }
 
@@ -540,65 +652,79 @@
         }
         // 開啟單一頁面
 
+        var subItem04 = ["subItem04_01", "subItem04_02", "subItem04_03"]
+        var SubHide = ["hide01", "hide02", "hide03"];
+        var SubHideState = [false, false, false]
+        var SubHideItem = ["hide01_01", "hide02_01", "hide03_01"]
+        var HideObj;
+        var Group04Height;
 
-        // nav控制
+        function HideAll() {
+            for (i = 0; i < 3; i++) {
+                HideObj = document.getElementById(subItem04[i]);
+                HideObj.style.height = 35 + 'vh';
+            }
 
+            MainEventInfor.style.height = 106 + 'vh';
 
-        var HideEventInfor = ['HideEventInfor_01'];
-        var HideState = [false, false, false];
+            for (i = 0; i < 3; i++) {
+                HideObj = document.getElementById(SubHide[i]);
+                HideObj.style.height = 0 + 'px';
+                HideObj.style.display = "none";
+            }
 
-        var elementId;
-        var element;
-
-        function GroupHide() {
-
-            for (var i = 0; i < 1; i++) {
-                elementId = HideEventInfor[i];
-                element = document.getElementById(elementId);
-
-                //   console.log(elementId);
-
-                MainEventInfor.style.height = window.innerHeight * 0.4 + 'px';
-                element.style.display = "none";
-                HideState[i] = false;
+            for (i = 0; i < 3; i++) {
+                HideObj = document.getElementById(SubHideItem[i]);
+                HideObj.style.height = 0 + 'px';
+                HideObj.style.display = "none";
             }
         }
 
-        function GroupShow(index) {
+        function SubItem04Control(index) {
 
-            if (HideState[index] == false) {
-                elementId = HideEventInfor[index];
-                element = document.getElementById(elementId);
+            if (!SubHideState[index]) {
 
-                MainEventInfor.style.height = window.innerHeight * 1 + 'px';
-                element.style.display = "block";
-                HideState[index] = true;
+                MainEventInfor.style.height = 270 + 'vh';
+                HideObj = document.getElementById(subItem04[index]);
+                HideObj.style.height = 90 + 'vh';
+
+                HideObj = document.getElementById(SubHide[index]);
+                HideObj.style.height = 35 + 'vh';
+                HideObj.style.display = "block";
+
+                HideObj = document.getElementById(SubHideItem[index]);
+                HideObj.style.height = 65 + 'vh';
+                HideObj.style.display = "block";
+
+                SubHideState[index] = true;
             }
-            else {
-                elementId = HideEventInfor[index];
-                element = document.getElementById(elementId);
 
-                MainEventInfor.style.height = window.innerHeight * 0.4 + 'px';
-                element.style.display = "none";
-                HideState[index] = false;
+            else if (SubHideState[index]) {
+                HideObj = document.getElementById(SubHide[index]);
+                HideObj.style.height = 0 + 'vh';
+                HideObj.style.display = "none";
+
+                HideObj = document.getElementById(SubHideItem[index]);
+                HideObj.style.height = 0 + 'vh';
+                HideObj.style.display = "none";
+
+                SubHideState[index] = false;
             }
+
+            console.log(SubHideState[index]);
 
         }
 
-        // subgroup控制
 
-        window.onload = function () {
+        // EventInfo控制
 
-            HideAllDiv();
-
-            ShowDiv("Intro");
-        }
 
         // 視窗啟動
 
         //點擊切換大圖
         let gameImages;
         let bigGameImage;
+
         window.onload = function () {
             gameImages = document.getElementsByClassName('subitem_gameImg');
             bigGameImage = document.getElementsByClassName('subitem_bigImg');
@@ -633,6 +759,10 @@
             gameImages[9].addEventListener('click', function () {
                 bigGameImage[1].src = gameImages[9].src;
             })
+
+            HideAllDiv();
+
+            ShowDiv(1);
         }
 
     </script>
