@@ -21,17 +21,14 @@
 
         .bg {
             width: 100vw;
-            /* background-color: #F1F1E6; */
+            height: auto;
+            display: flex;
         }
 
         .container {
-            margin: 0 auto;
-            width: 80vw;
-            display: flex;
-            flex-direction: column;
-
-            background-color: #F1F1E6;
-            width: 120vw;
+            width: 60vw;
+            height: auto;
+            background-color: #D6E9E6;
         }
 
         .body {
@@ -72,8 +69,8 @@
 
         .subGroupName {
             top: 50px;
-            color: black;
-            background-color: #ACD1F5;
+            color: white;
+            background-color: #34867D;
             display: flex;
             justify-content: space-around;
             position: sticky;
@@ -200,7 +197,7 @@
         .footer {
             height: 4vh;
             font-size: 15px;
-            background-color: rgb(40, 125, 196);
+            background-color: #34867D;
             bottom: 0;
             display: flex;
             position: sticky;
@@ -248,8 +245,7 @@
         }
 
         .pageItemArea {
-            height: auto;
-            background-color: #F1F1E6;
+            background-color: #D6E9E6;
 
         }
 
@@ -274,7 +270,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
-            border: 3px solid gray;
+            border: 5px solid #1E4866;
+            margin-top: 10px;
         }
 
         .pageHistory {
@@ -327,7 +324,6 @@
         }
 
         .ProducerContainer {
-
             height: 90vh;
             width: 80vw;
 
@@ -339,30 +335,26 @@
 
         .Producer {
             height: 30vh;
-            width: 80vw;
 
             border: solid silver;
-
+            margin-top: 5px;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
         }
 
-        .ProducerPic
-        {
+        .ProducerPic {
             width: 30vw;
             height: 30vh;
 
-            
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
         }
 
-        .ProducerText
-        {
+        .ProducerText {
             width: 70vw;
             height: 30vh;
 
@@ -370,8 +362,14 @@
             flex-direction: row;
             justify-content: left;
             align-items: center;
-            
+
             font-size: 30px;
+        }
+
+        .bannerText{
+            font-size: 35px;
+            color: white;
+            text-shadow: black 0.1em 0.1em 0.1em;
         }
     </style>
 </head>
@@ -382,7 +380,7 @@
         <div class="container" id="Container">
             <div class="header">
                 <img src='img/logo_YZUGC.png' alt="" style="width: 125px;height: 125px;">
-                <p style="position: relative; top: 1px;">元智遊戲創作社官方網站</p>
+                <div class="bannerText">元智大學遊戲創作社</div>
             </div>
 
             <div class="topNav">
@@ -410,17 +408,14 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="img/gameScreenshot/TD_screenShot(1).png" class="d-block w-100" alt="...">
+                                <img src="img/Event/groupPic.jpg" class="d-block w-100" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h2>圖片標題</h2>
-                                    <p>描述</p>
+                                    <h2>歡迎加入遊創大家庭</h2>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img src="img/gameScreenshot/TD_screenShot(1).png" class="d-block w-100" alt="...">
+                                <img src="img/Event/YZUGCflag.jpg" class="d-block w-100" alt="...">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h2>圖片標題</h2>
-                                    <p>描述</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
@@ -618,21 +613,30 @@
                     <!-- 03 -->
                 </div>
 
-                <div class="subGroupName" id="LableOther">其他資訊</div>
-                <div class="ProducerContainer" id="MainOther">
+                <div class="subGroupName" id="LableOther">工作分配</div>
+                <div class="pageItemArea" id="MainOther">
                     <div class="Producer">
-                        <div class="ProducerPic"><img src="img/sun.png" width="180" style="border-left: 10px;"></div>
-                        <div class="ProducerText"><p>學號: 1082045 姓名:許其彬 <br> 工作: 程式 </p></div>
+                        <div class="ProducerPic"><img src="img/avatar/sun.png" width="200" style="border-left: 10px;">
+                        </div>
+                        <div class="ProducerText">
+                            <p>學號：1082045 <br> 姓名：許其彬 <br> 工作：程式 </p>
+                        </div>
                     </div>
 
                     <div class="Producer">
-                        <div class="ProducerPic"></div>
-                        <div class="ProducerText"></div>
+                        <div class="ProducerPic"><img src="img/avatar/oLanPic.jpg" width="200"
+                                style="border-left: 10px;"></div>
+                        <div class="ProducerText">
+                            <p>學號：1082011 <br> 姓名：王晨 <br> 工作：版面設計、內容設計、程式</p>
+                        </div>
                     </div>
 
                     <div class="Producer">
-                        <div class="ProducerPic"></div>
-                        <div class="ProducerText"></div>
+                        <div class="ProducerPic"><img src="img/avatar/happyendPic.jpg" width="200"
+                                style="border-left: 10px;"></div>
+                        <div class="ProducerText">
+                            <p>學號：1101826 <br> 姓名：林奕安 <br> 工作：程式 </p>
+                        </div>
                     </div>
                 </div>
                 <div class="footer">@YZUGC 聯絡我們 電子信箱：yzugamecreat@gmail.com</div>
