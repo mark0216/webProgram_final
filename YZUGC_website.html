@@ -99,8 +99,8 @@
         }
 
         .subItemTitle {
-            height: 3vh;
-            font-size: 20px;
+            font-size: 30px;
+            font-weight: bold;
         }
 
         .subItem04Block {
@@ -153,8 +153,7 @@
 
         .subItem04HideItem {
 
-            height: 0vh;
-            width: 66vw;
+            width: 100%;
 
             /* 本體*/
 
@@ -162,6 +161,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            border: 8px solid black;
             /* flex*/
         }
 
@@ -179,11 +179,8 @@
         }
 
         .subItem04HideItemText {
-
-            height: 30vh;
             width: 100%;
             padding: 7vh;
-
             /* 本體*/
 
             display: flex;
@@ -460,11 +457,11 @@
                 </div>
 
                 <div class="subGroupName" id="LableEventInfor">活動資訊</div>
-                <div class="subGroup04" id="MainEventInfor">
+                <div class="pageItemArea" id="MainEventInfor">
 
                     <div class="subItem04" id="subItem04_01">
 
-                        <div class="subItemTitle" style="border: solid gray 1px;">即將舉辦</div>
+                        <div class="subItemTitle" style="border: solid gray 2px;">即將舉辦</div>
                         <div class="subItem04Block" id="block01" onclick="SubItem04Control(0)">
 
                             <div class="subItem04BlockPic"> <img src="img/Event/GameJam.jpg" width="180"></div>
@@ -472,9 +469,9 @@
                             <div class="subItem04BlockText">
                                 <p>
                                     跨校聯合Game Jam <br>
-
+                                    <br>
                                     參加對象：對遊戲製作有興趣之學生以及業界人士 <br>
-
+                                    <br>
                                     報名費用：免費
                                 </p>
                             </div>
@@ -486,8 +483,8 @@
                             <div class="subItem04HideItem" id="hide01_01">
                                 <div class="subItem04HideItemText" style="font-size: 30px;">
                                     <p>
-                                        所有參加者將進行分組，透過組別合作與討論於三天的時間內創作出符合主題的遊戲，並於最後進行各組的成果發表。
-
+                                        活動內容：所有參加者將進行分組，透過組別合作與討論於三天的時間內創作出符合主題的遊戲，並於最後進行各組的成果發表。<br>
+                                        <br>                                
                                         <a
                                             href="https://docs.google.com/forms/d/1F74aTGsMc9FSSXIedcBpvJjComjkxjvwzwAxee4w6Wc/viewform?fbclid=IwAR1fIrnSmkAr7v7vppyXA_zRklnyI8ub6p71DBw7IsjDY5CAw-1eDWsrYyA&edit_requested=true">報名連結</a>
                                     </p>
@@ -500,7 +497,7 @@
 
                     <div class="subItem04" id="subItem04_02">
 
-                        <div class="subItemTitle" style="border: solid gray 1px;">過去活動</div>
+                        <div class="subItemTitle" style="border: solid gray 1px;">過往活動</div>
                         <div class="subItem04Block" id="block02" onclick="SubItem04Control(1)">
 
                             <div class="subItem04BlockPic"> <img src="img/Event/Lecture01.png" width="180"></div>
@@ -796,4 +793,5 @@
             }
         </script>
 </body>
+
 </html>
