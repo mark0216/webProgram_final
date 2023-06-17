@@ -64,6 +64,7 @@
             font-size: 30px;
             padding: 5px;
             color: white;
+            text-decoration: none;
             text-align: center;
         }
 
@@ -300,11 +301,15 @@
         }
 
         .aboutUs1 {
-            background: center/ cover no-repeat url(img/intro/intro_1.jpg);
+            background-image: url(img/intro/intro_1.jpg);
             width: 100%;
             height: 40vh;
             display: flex;
             align-items: center;
+        }
+        .aboutUs1:hover{
+            background-repeat: repeat-x;
+            animation: moveLeft 2s linear infinite;           
         }
 
         .aboutUs2 {
@@ -366,10 +371,39 @@
             font-size: 30px;
         }
 
-        .bannerText{
+        .bannerText {
             font-size: 35px;
             color: white;
             text-shadow: black 0.1em 0.1em 0.1em;
+
+            animation: bannerTextAnim 4s;
+            animation-iteration-count: infinite;
+            animation-delay: 0.2s;
+        }
+
+        /* animation */
+        @keyframes bannerTextAnim {
+            0% {
+                font-size: 35px;
+            }
+
+            50% {
+                font-size: 37px;
+            }
+
+            100% {
+                font-size: 35px;
+            }
+        }
+
+        @keyframes moveLeft {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: -100% 0;
+            }
         }
     </style>
 </head>
@@ -384,8 +418,8 @@
             </div>
 
             <div class="topNav">
-                <div class="navItem" onclick="ShowDiv(1)">首頁</div>
-                <div class="navItem" onclick="ShowDiv(2)">關於我們</div>
+                <div class="navItem"><a href="GrooveCoaster.html">首頁</a></div>
+                <div class="navItem" >關於我們</div>
                 <div class="navItem" onclick="ShowDiv(3)">社團作品</div>
                 <div class="navItem" onclick="ShowDiv(4)">活動資訊</div>
                 <div class="navItem" onclick="ShowDiv(5)">其他資訊</div>
@@ -447,9 +481,13 @@
 
                     <div class="aboutUs1">教導社員製作遊戲大小事</div>
 
-                    <div class="aboutUs2" id="LableAb2"><p style="padding-top: 20vh; padding-left: 80vh;">舉辦活動增進製作經驗</p></div>
+                    <div class="aboutUs2" id="LableAb2">
+                        <p style="padding-top: 20vh; padding-left: 80vh;">舉辦活動增進製作經驗</p>
+                    </div>
 
-                    <div class="aboutUs3" id="LableAb3"><p style="padding-top: 20vh; padding-right: 70vh;">舉辦企業參訪活動連結產業</p></div>
+                    <div class="aboutUs3" id="LableAb3">
+                        <p style="padding-top: 20vh; padding-right: 70vh;">舉辦企業參訪活動連結產業</p>
+                    </div>
                 </div>
                 <div class="subGroupName" id="LableAsset">社團作品</div>
                 <div class="pageItemArea" id="MainAsset">
