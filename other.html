@@ -131,6 +131,7 @@
 		}
 
 		.memberPhotoContainer {
+			position: relative;
 			width: 30%;
 			height: auto;
 		}
@@ -149,7 +150,27 @@
 		.memberPhoto_fadeout:hover {
 			animation: fabeout 1s forwards;
 		}
-
+		
+		.textOverlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			background-color: rgba(0, 0, 0, 0.5);
+			color: #fff;
+			z-index: 1;
+			border-radius: 20px;
+			font-size: 30px;
+			padding: 10px;
+			opacity: 0;
+		}
+		
+		.textOverlay:hover{
+			animation: fabein 1s forwards;			
+		}		
 
 		/* animation */
 		@keyframes bannerTextAnim {
@@ -199,6 +220,15 @@
 				opacity: 0;
 			}
 		}
+		@keyframes fabein {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
 	</style>
 </head>
 
@@ -226,7 +256,11 @@
 				<img src="img/avatar/happyendPic.jpg" class="memberPhoto_fadeout" alt="">
 				<div class="memberPhotoContainer">
 					<img src="img/avatar/oLanPic.jpg" class="memberPhoto" alt="">
-
+					<div class="textOverlay">
+						王晨</br>
+						</br>
+						工作：網頁設計、文案、程式
+					</div>
 				</div>
 				<img src="img/avatar/sun.png" class="memberPhoto_fadeout" alt="">
 
