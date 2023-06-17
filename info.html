@@ -103,8 +103,6 @@
 
 		.pageItemArea {
 			background-color: #D6E9E6;
-			display: flex;
-			flex-direction: column;
 		}
 
 		.bannerText {
@@ -125,95 +123,40 @@
 			animation: rotateAnimation 1.5s linear infinite;
 		}
 
-
 		a:link {
 			text-decoration: none;
 		}
 
-		.image-container_L {
-			position: relative;
-			display: flex;
-			justify-content: center;
-			overflow: hidden;
-		}
-
-		.image-container_R {
-			position: relative;
-			display: flex;
-			justify-content: center;
-			overflow: hidden;
-		}
-
-		.image-container_L img {
-			display: block;
+		.bigDiv {
 			width: 100%;
 			height: auto;
-			transition: transform 0.3s;
+			border: 3px solid rgb(30, 72, 102);
 		}
 
-		.image-container_R img {
-			display: block;
+		.bigTitle {
+			border: 3px solid gray;
+			font-size: 40px;
+			font-weight: bold;
 			width: 100%;
-			height: auto;
-			transition: transform 0.3s;
-		}
-
-		.topDiv {
-			background: center/ cover no-repeat url(img/intro/intro_0.jpg);
-			width: 100%;
-			height: 40vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 80px;
-			color: white;
-		}
-
-		.image-container_L:hover img {
-			transform: translateX(31%);
-		}
-
-		.image-container_R:hover img {
-			transform: translateX(-31%);
-		}
-
-		.divTitle_L {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 31%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.664);
-			color: #ffffff;
-			font-size: 25px;
 			padding: 10px;
-			transform: translateX(-100%);
-			transition: transform 0.3s;
+		}
+
+		.eventDiv {
+			width: 100%;
+			height: auto;
+			background-color: #cbe2e9;
 			display: flex;
-			align-items: center;
 		}
 
-		.divTitle_R {
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			width: 31%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.664);
-			color: #ffffff;
-			font-size: 25px;
-			transform: translateX(100%);
-			transition: transform 0.3s;
-			display: flex;
-			align-items: center;
+		.eventImg {
+			width: 30%;
+			height: auto;
+			padding: 50px;
 		}
 
-		.image-container_L:hover .divTitle_L {
-			transform: translateX(0);
-		}
-
-		.image-container_R:hover .divTitle_R {
-			transform: translateX(0);
+		.eventIntro {
+			padding: 60px;
+			font-size: 30px;
 		}
 
 		/* animation */
@@ -276,25 +219,42 @@
 
 		<div class="article" id="LableAb1">
 
-			<div class="subGroupName">關於我們</div>
-			<div class="pageItemArea">
-
-				<div class="topDiv">關於我們</div>
-
-				<div class="image-container_L">
-					<img src="img/intro/intro_1.jpg" alt="關於我們">
-					<div class="divTitle_L">教導社員製作遊戲大小事</div>
+			<div class="subGroupName">活動資訊</div>
+			<div class="bigDiv">
+				<div class="bigTitle">即將舉辦</div>
+				<div class="eventDiv">
+					<img src="img/Event/GameJam.jpg" class="eventImg">
+					<div class="eventIntro">
+						<h1>跨校聯合Game Jam</h1> <br>
+						<br>
+						參加對象：對遊戲製作有興趣之學生以及業界人士 <br>
+						<br>
+						報名費用：免費
+					</div>
+				</div>
+				<div class="bigTitle">過往活動</div>
+				<div class="eventDiv">
+					<img src="img/Event/Lecture01.png" class="eventImg">
+					<div class="eventIntro">
+						<h1>講座 - 與日本產業的連結</h1> <br>
+						<br>
+						參加對象：對遊戲製作有興趣之學生以及業界人士 <br>
+						<br>
+						參加費用：免費
+					</div>
 				</div>
 
-				<div class="image-container_R">
-					<img src="img/intro/intro_2.jpg" alt="關於我們">
-					<div class="divTitle_R">舉辦活動增進製作經驗</div>
+				<div class="eventDiv">
+					<img src="img/Event/WorkShop01.png" class="eventImg">
+					<div class="eventIntro">
+						<h1>遊戲工作坊</h1> <br>
+						<br>
+						參加對象：遊戲創作社社員 <br>
+						<br>
+						報名費用：免費
+					</div>
 				</div>
 
-				<div class="image-container_L">
-					<img src="img/intro/intro_3.jpg" alt="關於我們">
-					<div class="divTitle_L">舉辦企業參訪活動連結產業</div>
-				</div>
 			</div>
 
 			<div class="footer">
