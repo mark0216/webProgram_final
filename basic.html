@@ -103,8 +103,6 @@
 
 		.pageItemArea {
 			background-color: #D6E9E6;
-			display: flex;
-			flex-direction: column;
 		}
 
 		.bannerText {
@@ -128,88 +126,6 @@
 
 		a:link {
 			text-decoration: none;
-		}
-
-		.image-container_L {
-			position: relative;
-			display: flex;
-			justify-content: center;
-			overflow: hidden;
-		}
-		.image-container_R {
-			position: relative;
-			display: flex;
-			justify-content: center;
-			overflow: hidden;
-		}
-
-		.image-container_L img {
-			display: block;
-			width: 100%;
-			height: auto;
-			transition: transform 0.3s;
-		}
-		.image-container_R img {
-			display: block;
-			width: 100%;
-			height: auto;
-			transition: transform 0.3s;
-		}
-
-		.topDiv {
-            background: center/ cover no-repeat url(img/intro/intro_0.jpg);
-            width: 100%;
-            height: 40vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 80px;
-			color: white;
-        }
-
-		.image-container_L:hover img {
-			transform: translateX(31%);
-		}
-		.image-container_R:hover img {
-			transform: translateX(-31%);
-		}
-
-		.divTitle_L {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 31%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.664);
-			color: #ffffff;
-			font-size: 25px;
-			padding: 10px;
-			transform: translateX(-100%);
-			transition: transform 0.3s;
-			display: flex;
-			align-items: center;
-		}
-
-		.divTitle_R {
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			width: 31%;
-			height: 100%;
-			background-color: rgba(0, 0, 0, 0.664);
-			color: #ffffff;
-			font-size: 25px;
-			transform: translateX(100%);
-			transition: transform 0.3s;
-			display: flex;
-			align-items: center;
-		}
-
-		.image-container_L:hover .divTitle_L {
-			transform: translateX(0);
-		}
-		.image-container_R:hover .divTitle_R {
-			transform: translateX(0);
 		}
 
 		/* animation */
@@ -275,25 +191,6 @@
 			<div class="article" id="LableAb1">
 
 				<div class="subGroupName">關於我們</div>
-				<div class="pageItemArea">
-
-					<div class="topDiv">關於我們</div>
-
-					<div class="image-container_L">
-						<img src="img/intro/intro_1.jpg" alt="關於我們">
-						<div class="divTitle_L">教導社員製作遊戲大小事</div>
-					</div>
-
-					<div class="image-container_R">
-						<img src="img/intro/intro_2.jpg" alt="關於我們">
-						<div class="divTitle_R">舉辦活動增進製作經驗</div>
-					</div>
-
-					<div class="image-container_L">
-						<img src="img/intro/intro_3.jpg" alt="關於我們">
-						<div class="divTitle_L">舉辦企業參訪活動連結產業</div>
-					</div>
-				</div>
 
 				<div class="footer">
 					@YZUGC 聯絡我們 電子信箱：yzugamecreat@gmail.com
