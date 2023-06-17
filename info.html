@@ -161,7 +161,7 @@
 		}
 
 		/* 彈出視窗	 */
-		.modal-overlay {
+		.modalOverlay {
 			display: none;
 			position: fixed;
 			top: 0;
@@ -185,7 +185,7 @@
 			font-size: 20px;
 		}
 
-		.close-modal {
+		.closeModal {
 			position: absolute;
 			top: 15px;
 			right: 15px;
@@ -302,9 +302,9 @@
 			</div>
 
 			<!-- 彈出視窗 -->
-			<div class="modal-overlay" id="overlay1">
+			<div class="modalOverlay" id="overlay1">
 				<div class="modalContainer">
-					<span class="close-modal">&times;</span>
+					<span class="closeModal">&times;</span>
 					<h2>跨校聯合Game Jam</h2>
 					<br><br>
 					跨校聯合Game Jam <br><br>
@@ -314,9 +314,9 @@
 				</div>
 			</div>
 
-			<div class="modal-overlay" id="overlay2">
+			<div class="modalOverlay" id="overlay2">
 				<div class="modalContainer">
-					<span class="close-modal">&times;</span>
+					<span class="closeModal">&times;</span>
 					<h2>講座 - 與日本產業的連結</h2>
 					<img src="img/Event/Lecture02.jpg" class="overlayImg">
 					<img src="img/Event/Lecture03.jpg" class="overlayImg">
@@ -331,9 +331,9 @@
 				</div>
 			</div>
 
-			<div class="modal-overlay" id="overlay3">
+			<div class="modalOverlay" id="overlay3">
 				<div class="modalContainer">
-					<span class="close-modal">&times;</span>
+					<span class="closeModal">&times;</span>
 					<h2>遊戲工作坊</h2>
 					<img src="img/Event/WorkShop02.jpg" class="overlayImg">
 					<img src="img/Event/WorkShop03.jpg" class="overlayImg">
@@ -360,8 +360,8 @@
 
 		<script>
 			const openModalDivs = document.querySelectorAll('.eventDiv');
-			const closeModalBtns = document.querySelectorAll('.close-modal');
-			const modalOverlays = document.querySelectorAll('.modal-overlay');
+			const closeModalBtns = document.querySelectorAll('.closeModal');
+			const modalOverlays = document.querySelectorAll('.modalOverlay');
 
 			openModalDivs.forEach(function (openModalDiv) {
 				openModalDiv.addEventListener('click', function () {
@@ -373,7 +373,7 @@
 
 			closeModalBtns.forEach(function (closeModalBtn) {
 				closeModalBtn.addEventListener('click', function () {
-					const targetOverlay = this.closest('.modal-overlay');
+					const targetOverlay = this.closest('.modalOverlay');
 					targetOverlay.style.display = 'none';
 				});
 			});
