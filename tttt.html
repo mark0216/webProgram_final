@@ -19,194 +19,69 @@
 			padding: 0;
 		}
 
-		body {
-			background-image: linear-gradient(to right, #7dd4c7, #809bd4);
-			background-size: 200% auto;
-			animation: gradientAnimation 5s linear infinite;
-		}
-
-		.container {
-			width: 60vw;
-			height: auto;
-			background-color: #a2dbec;
-		}
-
-		.body {
-			background-image: url("https://www.wellwiz.com.tw/prdimage/2014/06/colors-agent-blue1.jpg");
-			background-size: cover;
-		}
-
-		.header {
-			background: center/ cover no-repeat url(img/skyBG.jpg);
-			width: 100%;
-			height: 20vh;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			font-size: 30px;
-			top: 10px;
-		}
-
-		.subGroupName {
-			top: 50px;
-			color: white;
-			background-color: #34867D;
-			display: flex;
-			justify-content: space-around;
-			position: sticky;
-			font-size: 30px;
-			text-align: center;
-			z-index: 100;
-		}
-
-		.topNav {
-			display: flex;
-			justify-content: space-around;
+		.modal-overlay {
+			display: none;
+			position: fixed;
 			top: 0;
-			position: sticky;
-			z-index: 100;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 999;
 		}
 
-		.navItem {
-			background-color: rgb(30, 72, 102);
-			border: 1px solid black;
-			flex-basis: 100%;
-			font-size: 30px;
-			padding: 5px;
-			color: white;
+		.modal-content {
+			position: absolute;
+			width: 80%;
+			height: auto;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #fff;
+			padding: 20px;
 			text-align: center;
 		}
 
-		.footer {
-			height: 4vh;
-			font-size: 15px;
-			background-color: #34867D;
-			bottom: 0;
-			display: flex;
-			position: sticky;
-			justify-content: center;
-			color: white;
-			padding-top: 5px;
+		.close-modal {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			cursor: pointer;
 		}
 
-		.footerImage {
-			margin-left: 15px;
-			width: 25px;
+		img {
+			width: 60%;
 			height: auto;
-		}
-
-		.article .group {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-		}
-
-		.pageItemArea {
-			background-color: #D6E9E6;
-		}
-
-		.bannerText {
-			font-size: 35px;
-			color: white;
-			text-shadow: black 0.1em 0.1em 0.1em;
-
-			animation: bannerTextAnim 4s;
-			animation-iteration-count: infinite;
-			animation-delay: 0.2s;
-		}
-
-		.rotate-image {
-			transition: transform 0.3s;
-		}
-
-		.rotate-image:hover {
-			animation: rotateAnimation 1.5s linear infinite;
-		}
-
-
-		a:link {
-			text-decoration: none;
-		}
-
-		/* animation */
-		@keyframes bannerTextAnim {
-			0% {
-				font-size: 35px;
-			}
-
-			50% {
-				font-size: 37px;
-			}
-
-			100% {
-				font-size: 35px;
-			}
-		}
-
-		@keyframes gradientAnimation {
-			0% {
-				background-position: 0% 50%;
-			}
-
-			50% {
-				background-position: 100% 50%;
-			}
-
-			100% {
-				background-position: 0% 50%;
-			}
-		}
-
-		@keyframes rotateAnimation {
-			0% {
-				transform: rotateY(0deg);
-			}
-
-			100% {
-				transform: rotateY(360deg);
-			}
 		}
 	</style>
 </head>
 
 <body>
-	<div class="bg">
 
-		<div class="container" id="Container">
-			<div class="header">
-				<a href="https://www.facebook.com/profile.php?id=100083159179544">
-					<img class="rotate-image" src='img/logo_YZUGC.png' alt="" style="width: 125px;height: 125px;">
-				</a>
-				<div class="bannerText">元智大學遊戲創作社</div>
-			</div>
+	<div class="open-modal">點擊這裡打開視窗</div>
 
-			<div class="topNav">
-				<div class="navItem"><a href="index.html">首頁</a></div>
-				<div class="navItem"><a href="aboutUs.html">關於我們</a></div>
-				<div class="navItem"><a href="product.html">社團作品</a></div>
-				<div class="navItem"><a href="info.html">活動資訊</a></div>
-				<div class="navItem"><a href="other.html">其他資訊</a></div>
-			</div>
+	<div class="modal-overlay">
+	  <div class="modal-content">
+		<span class="close-modal">&times;</span>
+		<h2>彈出視窗</h2>
+		<p>這裡是視窗的內容文字。</p>
+		<img src="image.jpg" alt="圖片">
+	  </div>
+	</div>
 
-			<div class="article" id="LableAb1">
+	<script>
+		const openModalBtn = document.querySelector('.open-modal');
+		const closeModalBtn = document.querySelector('.close-modal');
+		const modalOverlay = document.querySelector('.modal-overlay');
 
-				<div class="subGroupName">關於我們</div>
+		openModalBtn.addEventListener('click', function () {
+			modalOverlay.style.display = 'block';
+		});
 
-				<div class="footer">
-					@YZUGC 聯絡我們 電子信箱：yzugamecreat@gmail.com
-					<a href="https://www.youtube.com/channel/UCGZxGnnS3HWnerBh19wa9Vg">
-						<img class="footerImage" src="img/icon/YouTubeIcon.png" alt="">
-					</a>
-					<a href="https://www.facebook.com/profile.php?id=100083159179544">
-						<img class="footerImage" src="img/icon/FacebookLogo.png" alt="">
-					</a>
-				</div>
-			</div>
-		</div>
-
-		<script>
-
-		</script>
+		closeModalBtn.addEventListener('click', function () {
+			modalOverlay.style.display = 'none';
+		});
+	</script>
 </body>
 
 </html>

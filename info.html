@@ -155,8 +155,51 @@
 		}
 
 		.eventIntro {
+			width: 60%;
 			padding: 60px;
 			font-size: 30px;
+		}
+
+		/* 彈出視窗	 */
+		.modal-overlay {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 100;
+		}
+
+		.modalContainer {
+			position: absolute;
+			width: 60%;
+			height: auto;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #fff;
+			padding: 10px;
+		    padding-left: 10px;
+			font-size: 20px;
+		}
+
+		.close-modal {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			cursor: pointer;
+		}
+
+		.overlayImg {
+			width: 40%;
+			height: auto;
+		}
+
+		.overlayText{
+			width: 80%;
+			height: auto;
 		}
 
 		/* animation */
@@ -222,7 +265,8 @@
 			<div class="subGroupName">活動資訊</div>
 			<div class="bigDiv">
 				<div class="bigTitle">即將舉辦</div>
-				<div class="eventDiv">
+
+				<div class="eventDiv" id="modal1">
 					<img src="img/Event/GameJam.jpg" class="eventImg">
 					<div class="eventIntro">
 						<h1>跨校聯合Game Jam</h1> <br>
@@ -233,7 +277,8 @@
 					</div>
 				</div>
 				<div class="bigTitle">過往活動</div>
-				<div class="eventDiv">
+
+				<div class="eventDiv" id="modal2">
 					<img src="img/Event/Lecture01.png" class="eventImg">
 					<div class="eventIntro">
 						<h1>講座 - 與日本產業的連結</h1> <br>
@@ -244,7 +289,7 @@
 					</div>
 				</div>
 
-				<div class="eventDiv">
+				<div class="eventDiv" id="modal3">
 					<img src="img/Event/WorkShop01.png" class="eventImg">
 					<div class="eventIntro">
 						<h1>遊戲工作坊</h1> <br>
@@ -254,8 +299,53 @@
 						報名費用：免費
 					</div>
 				</div>
-
 			</div>
+
+			<!-- 彈出視窗 -->
+			<div class="modal-overlay" id="overlay1">
+				<div class="modalContainer">
+					<span class="close-modal">&times;</span>
+					<h2>跨校聯合Game Jam</h2>
+					<br><br>
+					跨校聯合Game Jam <br><br>
+					參加對象：對遊戲製作有興趣之學生以及業界人士 <br><br>
+					報名費用：免費<br><br>
+					活動內容：所有參加者將進行分組，透過組別合作與討論於三天的時間內創作出符合主題的遊戲，並於最後進行各組的成果發表。
+				</div>
+			</div>
+
+			<div class="modal-overlay" id="overlay2">
+				<div class="modalContainer">
+					<span class="close-modal">&times;</span>
+					<h2>講座 - 與日本產業的連結</h2>
+					<img src="img/Event/Lecture02.jpg" class="overlayImg">
+					<img src="img/Event/Lecture03.jpg" class="overlayImg">
+					<div class="overlayText">
+						<br>
+						我們邀請到日本CyberConnect 2株式會社的代表取締役兼遊戲製作人
+						松山洋先生與唯晶科技日本商務區負責人 片野秋男先生為我們帶來
+						「台灣與日本遊戲產業的連結」講座，不僅為大家解惑日本和台灣
+						遊戲產業的差異，也將告訴大家如何進入日本遊戲產業，即便是現有
+						的遊戲工作室也可以與日本的遊戲廠商進行商業合作！
+					</div>
+				</div>
+			</div>
+
+			<div class="modal-overlay" id="overlay3">
+				<div class="modalContainer">
+					<span class="close-modal">&times;</span>
+					<h2>遊戲工作坊</h2>
+					<img src="img/Event/WorkShop02.jpg" class="overlayImg">
+					<img src="img/Event/WorkShop03.jpg" class="overlayImg">
+					<div class="overlayText">
+						<br>
+						這次工作坊我們分成了兩堂課程，第一堂課是教大家關於聲音的基礎知識，以及如何使用工具製作音效，
+						第二堂則是邀請了侍達遊戲藝術的創辦人，刃霧翔大大來為我們分享關於遊戲製作的經驗以及企畫方面的進階知識，
+						整個活動下來真的學到很多呢！
+					</div>
+				</div>
+			</div>
+
 
 			<div class="footer">
 				@YZUGC 聯絡我們 電子信箱：yzugamecreat@gmail.com
@@ -269,6 +359,24 @@
 		</div>
 
 		<script>
+			const openModalDivs = document.querySelectorAll('.eventDiv');
+			const closeModalBtns = document.querySelectorAll('.close-modal');
+			const modalOverlays = document.querySelectorAll('.modal-overlay');
+
+			openModalDivs.forEach(function (openModalDiv) {
+				openModalDiv.addEventListener('click', function () {
+					const targetId = this.getAttribute('id');
+					const targetOverlay = document.querySelector(`#${targetId.replace('modal', 'overlay')}`);
+					targetOverlay.style.display = 'block';
+				});
+			});
+
+			closeModalBtns.forEach(function (closeModalBtn) {
+				closeModalBtn.addEventListener('click', function () {
+					const targetOverlay = this.closest('.modal-overlay');
+					targetOverlay.style.display = 'none';
+				});
+			});
 
 		</script>
 </body>
